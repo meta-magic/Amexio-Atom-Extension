@@ -1,0 +1,15 @@
+{
+  "name": "amexio-atom-snippets",
+  "version": "0.0.1",
+  "description": "Amexio Component Snippets for Atom",
+  "keywords": [
+    "Angular2",
+    "TypeScript"
+  ],
+  "repository": "https://github.com/chhunchha/angular2-snippets-atom.git",
+  "license": "Apache-2.0",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
+}

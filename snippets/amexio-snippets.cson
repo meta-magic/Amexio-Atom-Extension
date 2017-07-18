@@ -1,0 +1,10 @@
+".text.html.basic":
+	"Amexio Text Input":
+		prefix: "amexio-text"
+		body: '''
+			<amexio-text-input  [(ngModel)]="$1" name="$2" [fieldLabel]="$3" [placeholder]="$4"
+			                    [allowBlank]="$5" [pattern]="$6"
+			                    [iconFeedBack]="$7">
+			</amexio-text-input>
+		'''
+
