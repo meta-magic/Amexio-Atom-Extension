@@ -1,13 +1,17 @@
 {
   "name": "MetaMagic-Amexio",
+  "displayName": "Amexio Angular Extensions for Atom",
   "version": "1.3.1",
-  "description": "Amexio Component Snippets for Atom",
+  "description": "Angular 4+ (HTML, TypeScripts, Amexio) Code Snippets",
   "keywords": [
-    "Angular2",
-    "TypeScript"
-  ],
+          "Amexio Angular Extensions",
+          "Angular 4",
+          "TypeScript",
+          "Bootstrap 4",
+          "Material Design"],
   "repository": "https://github.com/meta-magic/Amexio-Atom-Extension.git",
   "license": "Apache-2.0",
+  "icon": "images/logo.png",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
