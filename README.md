@@ -1,6 +1,6 @@
 # Amexio Angular Extensions for Atom
 
-This extension will help the developers of Atom with quick code snippet for the Amexio and Angular Markup as well as Angular TypeScript.
+This extension will help the developers of Atom with quick code snippet for the Amexio Angular Markup as well as Angular TypeScript.
 
 ## Usage
 
@@ -58,19 +58,19 @@ Once your library is imported, you can use its components, directives and pipes 
 
 ## Installing Extension in Atom
 
-```bash
-ext install amexio
-```
+In the install package section look for "MetaMagic-Amexio" (https://atom.io/packages/MetaMagic-Amexio) package
 
+<img src ="https://github.com/meta-magic/Amexio-Atom-Extension/blob/master/installPackage.png"/>
 
 ## Known Issues
 
 --
 
 ## Release Notes
-Amexio Atom Extension supports Amexio Varanasi update 1
-Amexio Atom Extension supports Amexio Hampi update 2
-
+```
+Amexio Atom Extension supports Amexio Varanasi http://www.amexio.org/showcaseapp/v1/index.html#/home
+Amexio Atom Extension supports Amexio Hampi http://www.amexio.org/showcaseapp/v2/index.html#/home
+```
 ### 1.0.0
 
 
