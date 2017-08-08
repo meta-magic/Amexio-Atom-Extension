@@ -56,7 +56,7 @@ Once your library is imported, you can use its components, directives and pipes 
 ```
 
 
-## Installing Extension in Visual Studio Code
+## Installing Extension in Atom
 
 ```bash
 ext install amexio
