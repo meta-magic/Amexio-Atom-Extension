@@ -67,12 +67,13 @@ In the install package section look for "MetaMagic-Amexio" (https://atom.io/pack
 --
 
 ## Release Notes
-```
-Amexio Atom Extension supports Amexio Varanasi http://www.amexio.org/showcaseapp/v1/index.html#/home
-Amexio Atom Extension supports Amexio Hampi http://www.amexio.org/showcaseapp/v2/index.html#/home
-```
-### 1.0.0
 
+### 1.X.X
+
+Amexio Atom Extension supports Amexio Varanasi
+    http://www.amexio.org/showcaseapp/v1/index.html#/home
+Amexio Atom Extension supports Amexio Hampi
+    http://www.amexio.org/showcaseapp/v2/index.html#/home
 
 ## License
 
