@@ -27,12 +27,12 @@ and then from your Angular `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,FormsModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
 // Import your library
-import { AmexioWidgetModule } from 'amexio-ng-extensions';
+import { AmexioWidgetModule,CommonHttpService } from 'amexio-ng-extensions';
 
 @NgModule({
   declarations: [
@@ -40,13 +40,35 @@ import { AmexioWidgetModule } from 'amexio-ng-extensions';
   ],
   imports: [
     BrowserModule,
-    AmexioWidgetModule
+    AmexioWidgetModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CommonHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 ```
+Include this in your app's angular-cli.json file
+
+``` json 
+"styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../src/assets/messenger-theme-air.css",
+        "../src/assets/messenger.css",
+        "../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css",
+        "../node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css",
+        "../node_modules/jquery-bootstrap-scrolling-tabs/jquery.scrolling-tabs.min.css",
+        "styles.css"
+      ],
+      "scripts": ["../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/jquery-bootstrap-scrolling-tabs/jquery.scrolling-tabs.min.js",
+        "../src/assets/messenger.js",
+        "../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+        "../node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-GB.min.js",
+        "../node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"],
+
+```
+If not using cli then simply add it to the index.html head.
 
 Once your library is imported, you can use its components, directives and pipes in your Angular application:
 
