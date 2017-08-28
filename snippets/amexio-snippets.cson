@@ -265,7 +265,7 @@
   "amexio-tab-with-icons":
     prefix: "amexio-tab-with-icons"
     body: """
-      <amexio-tab-pane [icons]=\"true\">
+      <amexio-tab-pane>
       \t <amexio-tab title=\"${1:title}\" [active]=\"true\"
       \t [icon]=\"'${2:icon}'\">
       \t<h4>${3:heading}</h4>
@@ -285,7 +285,7 @@
   "amexio-tab-vertical-left":
     prefix: "amexio-tab-vertical-left"
     body: """
-      <amexio-tab-pane [vertical]=\"true\">
+      <amexio-vertical-left-tab-pane>
       <amexio-tab title=\"${1:title}\" [active]=\"true\"
       [icon]=\"'${2:icon}'\">
       \t<h4>${3:heading}</h4>
@@ -299,13 +299,13 @@
       \t<h4>${11:heading4}</h4>
       \t${12:text5}
       </amexio-tab>
-      </amexio-tab-pane>
+      </amexio-vertical-left-tab-pane>
     """
     description: "Amexio Tab Vertical Left Aligned "
   "amexio-tab-vertical-right":
     prefix: "amexio-tab-vertical-right"
     body: """
-      <amexio-tab-pane [vertical]=\"true\" [tapPosition]=\"'right'\">
+      <amexio-vertical-right-tab-pane>
       <amexio-tab title=\"${1:title}\" [active]=\"true\"
        [icon]=\"'${2:icon}'\">
       \t<h4>${3:heading}</h4>
@@ -319,13 +319,13 @@
       \t<h4>${11:heading4}</h4>
       \t${12:text5}
       </amexio-tab>
-      </amexio-tab-pane>
+      </amexio-vertical-right-tab-pane>
     """
     description : "Amexio Tab Vertical Right Aligned "
   "amexio-tab-vertical-90-rotation":
     prefix: "amexio-tab-vertical-90-rotation"
     body: """
-      "<amexio-tab-pane [vertical]=\"true\" [tapPosition]=\"'right'\">
+      <amexio-vertical-left-tab-pane [verticalText]="true">
       <amexio-tab title=\"${1:title}\" [active]=\"true\"
       [icon]=\"'${2:icon}'\">
       \t<h4>${3:heading}</h4>
@@ -339,8 +339,8 @@
       \t<h4>${11:heading4}</h4>
       \t${12:text5}
       </amexio-tab>
-      </amexio-tab-pane>
-    """
+      </amexio-vertical-left-tab-pane>
+     """
     description: "Amexio Tab 90 Rotation "
   "amexio-check-box":
     prefix: "amexio-horizontal-check-box"
@@ -358,7 +358,7 @@
   "amexio-check-box-vertical":
     prefix: "amexio-vertical-check-box"
     body: """
-      <amexio-checkbox [fieldLabel]=\"'Vertical Checkbox"'\"
+      <amexio-checkbox [fieldLabel]=\"'Vertical Checkbox'\"
       name =\"'${1:name}'\"
       \t [dataReader]=\"'response.data'\"
       \t [displayField]=\"'${2:displayField}'\"
@@ -386,7 +386,7 @@
   "amexio-radio-group-vertical":
     prefix: "amexio-radio-group-vertical"
     body: """
-      <amexio-radio-group [fieldLabel]=\"'Vertical RadioGroup"'\"
+      <amexio-radio-group [fieldLabel]=\"'Vertical RadioGroup'\"
        name =\"${1:name}\"
       \t [fieldName]=\"'${2:fieldName}'\"
       \t [dataReader]=\"'${3:dataReader}'\"
@@ -415,7 +415,7 @@
     body: """
       <amexio-btn [label]=\"'${1:label}'\"
       \t [type]=\"'${2:type}'\"
-      \t [tooltipMessage]=\"''${3:tooltipMessage}'\">
+      \t [tooltipMessage]=\"'${3:tooltipMessage}'\">
       </amexio-btn>
       """
     description: "Amexio Type Button"
@@ -424,7 +424,7 @@
     body: """
       <amexio-btn [label]=\"'${1:label}'\"
       \t [type]=\"'primary'\"
-      \t [tooltipMessage]=\"''${2:tooltipMessage}''\"
+      \t [tooltipMessage]=\"'${2:tooltipMessage}'\"
       \t  [disabled]=\"'${3:disabled}'\">
       \t </amexio-btn>
       """
@@ -730,7 +730,7 @@
   "amexio-dropdown-multiselect-limited":
     prefix: "amexio-dropdown-multiselect-limited"
     body: """
-      <amexio-dropdown  (onMultiSelect)=\"setMultiVal($${1:event}\")
+      <amexio-dropdown  (onMultiSelect)=\"setMultiVal($${1:event})\"
       \t[placeholder]=\"'${2:placeholder}'\"
       \t[dataReader]=\"'response.data'\"
       \t[fieldLabel]=\"'${3:fieldLabel}'\"
@@ -752,7 +752,7 @@
   "amexio-dropdown-disply-count":
     prefix: "amexio-dropdown-disply-count"
     body: """
-      <amexio-dropdown  (onMultiSelect)=\"setMultiVal($${1:event})\")
+      <amexio-dropdown  (onMultiSelect)=\"setMultiVal($${1:event})\"
       \t[placeholder]=\"'${2:placeholder}'\"
       \t[dataReader]=\"'response.data'\"
       \t[fieldLabel]=\"'${3:fieldLabel}'\"
@@ -774,7 +774,7 @@
       </amexio-progress-bar> <amexio-btn \t [label]=\"${2:buttonLabel}\"
       \t [type]=\"'${3:type}'\"
       \t [tooltipMessage]=\"${4:tooltipMessage}\"
-      \t [disabled]=\"${5:btnState}'\"
+      \t [disabled]=\"'${5:btnState}'\"
            (onClick)="buttonClick($${6:event})">
         </amexio-btn>
       """
@@ -821,7 +821,7 @@
   "amexio-grid":
     prefix: "amexio-grid"
     body: """
-      <amexio-data-table"
+      <amexio-data-table
       \t[title]=\"'${1:title}'\"
       \t[pageSize] =\"'${2:pageSize}'\"
       \t[dataReader]=\"'response.data'\"
@@ -834,13 +834,12 @@
       \t\t [dataType]=\"'${9:dataType}'\" [hidden]=\"'${10:hidden}'\"
       \t\t [text]=\"'${11:text}'\"></amexio-data-table-column>
       \t\t<amexio-data-table-column [dataIndex]=\"'${12:dataIndex}'\"
-      \t\t [dataType]=\"${13:dataType2}\" [hidden]=\"'${14:hidden2}'\"
+      \t\t [dataType]=\"'${13:dataType2}'\" [hidden]=\"'${14:hidden2}'\"
       \t\t [text]=\"'${15:text2}'\"></amexio-data-table-column>
       \t\t <amexio-data-table-column [dataIndex]=\"'${16:dataIndex3}'\"
       \t\t [dataType]=\"'${17:dataType3}'\" [hidden]=\"'${18:hidden3}'\"
       \t\t [text]=\"'${19:text}'\" [summaryCaption]=\"'${20:summaryCaption}'\"
       \t [summaryType]=\"'${21:summaryType}'\"></amexio-data-table-column>
-      \t</amexio-data-table-column>
       </amexio-data-table>
       """
     description: "Amexio Data Grid"
@@ -865,9 +864,11 @@
       \t\t\t</span>
       \t\t</ng-template>
       \t\t</amexio-data-table-column>
+      \t\t<amexio-data-table-column 
       \t\t\t[dataIndex]=\"'${15:dataIndex1}'\"
       \t\t [dataType]=\"'${16:dataType1}'\" [hidden]=\"'${17:hidden1}'\"
       \t\t[text]=\"'${18:text1}'\"></amexio-data-table-column>
+      \t\t<amexio-data-table-column
       \t\t\t[dataIndex]=\"'${19:dataIndex2}'\"
       \t\t [dataType]=\"'${20:dataType2}'\" [hidden]=\"'${21:hidden2}'\"
       \t\t[text]=\"'${22:text2}'\"></amexio-data-table-column>
@@ -898,7 +899,7 @@
       \t (selectedRowData)=\"onRowSelect($${5:event})\"
       \t (rowSelect)=\"onRowClick($${6:event})\">
       \t\t<amexio-data-table-column [dataIndex]=\"'${7:dataIndex}'\"
-      \t\t [dataType]=\"'${8:dataType}'\" [hidden]=\"false\" "
+      \t\t [dataType]=\"'${8:dataType}'\" [hidden]=\"false\" 
       [text]=\"'${9:text}'\">
       </amexio-data-table-column>
       \t\t<amexio-data-table-column [dataIndex]=\"'${9:dataIndex2}'\"
@@ -975,11 +976,11 @@
       <amexio-tree-view
       \t [dataReader]=\"'${1:dataReader}'\"
       \t [httpMethod]=\"'${2:httpMethod}'\"
-      \t [httpUrl]=\"${3:httpUrl}'\"
+      \t [httpUrl]=\"'${3:httpUrl}'\"
       \t (selectedRecord)=\"onRowSelect($${4:event})\">
       \t <ng-template #amexioTreeTemplate let-tree let-icon=\"${5:icon}\"
        let-node=\"${6:node}\">
-      \t\t <i [attr.class]=\"{7:attrClass}\"></i> &nbsp; {{${8:text1}}}
+      \t\t <i [attr.class]=\"${7:attrClass}\"></i> &nbsp; {{${8:text1}}}
       \t </ng-template>
       </amexio-tree-view>
       """
@@ -990,12 +991,8 @@
       <amexio-tree-filter-view
       \t [dataReader]=\"'${1:dataReader}'\"
       \t [httpMethod]=\"'${2:httpMethod}'\"
-      \t [httpUrl]=\"${3:httpUrl}'\"
+      \t [httpUrl]=\"'${3:httpUrl}'\"
       \t (selectedRecord)=\"onRowSelect($${4:event})\">
-      \t <ng-template #amexioTreeTemplate let-tree let-icon=\"${5:icon}\"
-       let-node=\"{6:node}\">
-      <i [attr.class]=\"${7:attrClass}\"></i> &nbsp; {{${8:text1}}}
-      </ng-template>
       </amexio-tree-filter-view>
       """
     description: "Amexio Tree Filtered"
@@ -1005,22 +1002,9 @@
       <amexio-tree-view
       \t [dataReader]=\"'${1:dataReader}'\"
       \t [httpMethod]=\"'${2:httpMethod}'\"
-      \t [httpUrl]=\"${3:httpUrl}'\"
+      \t [httpUrl]=\"'${3:httpUrl}'\"
       \t [enableCheckBox]=\"true\"
-      \t (onTreeNodeChecked)=\"onCheckboxSelect($${4:event})\"
-      \t (selectedRecord)=\"onRowSelect($${5:event})\">
-      \t <ng-template #amexioTreeTemplate let-tree let-icon=\"${5:icon}\"
-       let-node=\"${6:node}\">
-      <i [attr.class]=\"${7:attrClass}\"></i> &nbsp; {{${8:text1}}}
-      </ng-template>
-      \t <ng-template #amexioTreeTemplate let-tree let-icon=\"${9:icon}\"
-       let-node=\"${10:node}\">
-      <i [attr.class]=\"${11:attrClass}\"></i> &nbsp; {{${12:text1}}}
-      </ng-template>
-      \t <ng-template #amexioTreeTemplate let-tree let-icon=\"${13:icon}\"
-       let-node=\"${14:node}\">
-      <i [attr.class]=\"${15:attrClass}\"></i> &nbsp; {{${16:text1}}}
-      </ng-template>
+      \t (onTreeNodeChecked)=\"onCheckboxSelect($${4:event})\">
       </amexio-tree-view>
       """
     description: "Amexio Tree with Checkboox"
@@ -1030,7 +1014,7 @@
       <amexio-menubar
       \t [dataReader]=\"'${1:dataReader}'\"
       \t [httpMethod]=\"'${2:httpMethod}'\"
-      \t [httpUrl]=\"${3:httpUrl}'\">
+      \t [httpUrl]=\"'${3:httpUrl}'\">
       </amexio-menubar>
       """
     description: "Amexio MenuBar Horizontal"
@@ -1040,12 +1024,12 @@
       <amexio-menubar
       \t [dataReader]=\"'${1:dataReader}'\"
       \t [httpMethod]=\"'${2:httpMethod}'\"
-      \t [httpUrl]=\"${3:httpUrl}'\">
+      \t [httpUrl]=\"'${3:httpUrl}'\">
       <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${4:navHeader1}\">
-      \t\t<span [attr.class]=\"${7:attrClass}\">{{${8:text1}}</span>
+      \t\t<span [attr.class]=\"${5:attrClass}\">{{${6:text1}}</span>
       \t</ng-template>
-      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${8:navHeader1}\">
-      \t\t<span [attr.class]=\"${9:attrClass}\">{{${10:text2}}}</span>
+      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${7:navHeader1}\">
+      \t\t<span [attr.class]=\"${8:attrClass}\">{{${9:text2}}}</span>
       \t</ng-template>
       </amexio-menubar>
       """
@@ -1056,13 +1040,13 @@
       <amexio-menubar
       \t [dataReader]=\"'${1:dataReader}'\"
       \t [httpMethod]=\"'${2:httpMethod}'\"
-      \t [httpUrl]=\"${3:httpUrl}'\"
+      \t [httpUrl]=\"'${3:httpUrl}'\"
       \t [bottom]=\"true\">
       <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${4:navHeader1}\">
-      \t\t<span [attr.class]=\"${7:attrClass}\">{{${8:text1}}</span>
+      \t\t<span [attr.class]=\"${5:attrClass}\">{{${6:text1}}</span>
       \t</ng-template>
-      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${8:navHeader1}\">
-      \t\t<span [attr.class]=\"${9:attrClass}\">{{${10:text2}}}</span>
+      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${7:navHeader1}\">
+      \t\t<span [attr.class]=\"${8:attrClass}\">{{${9:text2}}}</span>
       \t</ng-template>
       </amexio-menubar>
       """
@@ -1073,7 +1057,7 @@
       <amexio-sidemenubar
       \t [dataReader]=\"'${1:dataReader}'\"
       \t [httpMethod]=\"'${2:httpMethod}'\"
-      \t [httpUrl]=\"${3:httpUrl}'\">
+      \t [httpUrl]=\"'${3:httpUrl}'\">
       </amexio-sidemenubar>
       """
     description: "Amexio Side MenuBar"
@@ -1083,29 +1067,50 @@
       <amexio-sidemenubar
       \t [dataReader]=\"'${1:dataReader}'\"
       \t [httpMethod]=\"'${2:httpMethod}'\"
-      \t [httpUrl]=\"${3:httpUrl}'\">
+      \t [httpUrl]=\"'${3:httpUrl}'\">
       <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${4:navHeader1}\">
-      \t\t<span [attr.class]=\"${7:attrClass}\">{{${8:text1}}</span>
+      \t\t<span [attr.class]=\"${5:attrClass}\">{{${6:text1}}</span>
       \t</ng-template>
-      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${8:navHeader1}\">
-      \t\t<span [attr.class]=\"${9:attrClass}\">{{${10:text2}}}</span>
+      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${7:navHeader1}\">
+      \t\t<span [attr.class]=\"${8:attrClass}\">{{${9:text2}}}</span>
       \t</ng-template>
       </amexio-sidemenubar>
       """
     description: "Amexio Menubar Side with Template"
+ "amexio-Right-side-menubar" :
+        prefix  : "amexio-Right-side-menubar"
+        body : """
+      <amexio-sidemenubar
+      \t [httpMethod]=\"'${3:httpMethod}'\"
+      \t [httpUrl]=\"'${4:httpUrl}'\"
+      \t [dataReader]=\"'${1:dataReader}'\"
+      \t [right]=\"true\"
+      \t [width]=\"'${2:width}'\">
+      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${5:navHeader}\">
+      \t\t<span [attr.class]=\"${6:attrClass}\">{{${7:text}}</span>
+      \t</ng-template>
+      <ng-template #amexioNavHeaderTmpl  let-menuHeader=\"${8:menuHeader}\">
+      \t\t<span [attr.class]=\"${9:attrClass}\">{{${10:text}}}</span>
+      \t</ng-template>
+      <ng-template #amexioNavHeaderTmpl  let-subMenus=\"${11:subMenus}\">
+      \t\t<span [attr.class]=\"${12:attrClass}\">{{${13:text}}}</span>
+      \t</ng-template>
+      </amexio-sidemenubar>
+      """
+     description: "Amexio Right Side menubar"
   "amexio-menubar-side-at-bottom":
     prefix: "amexio-menubar-horizontal-at-bottom"
     body: """
       <amexio-sidemenubar
       \t [dataReader]=\"'${1:dataReader}'\"
       \t [httpMethod]=\"'${2:httpMethod}'\"
-      \t [httpUrl]=\"${3:httpUrl}'\"
+      \t [httpUrl]=\"'${3:httpUrl}'\"
       \t [bottom]=\"true\">
       <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${4:navHeader1}\">
-      \t\t<span [attr.class]=\"${7:attrClass}\">{{${8:text1}}</span>
+      \t\t<span [attr.class]=\"${5:attrClass}\">{{${6:text1}}</span>
       \t</ng-template>
-      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${8:navHeader1}\">
-      \t\t<span [attr.class]=\"${9:attrClass}\">{{${10:text2}}}</span>
+      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${7:navHeader1}\">
+      \t\t<span [attr.class]=\"${8:attrClass}\">{{${9:text2}}}</span>
       \t</ng-template>
       </amexio-sidemenubar>
       """
@@ -1200,7 +1205,7 @@
   "amexio-window-pane-large-small":
     prefix: "amexio-window-pane-large-small"
     body: """
-      "<amexio-btn-group>"
+      <amexio-btn-group>
         \t<amexio-btn-group-action [label]=\"'${1:label1}'\"
           [type]=\"'default'\"(onClick)=\"small()\" >
         \t</amexio-btn-group-action>
@@ -1258,7 +1263,7 @@
         \t\t\t </amexio-pane-body>
         \t\t\t <amexio-pane-action>
         \t\t\t\t <div style=\"float: right;\">
-        \t\t\t\t\t <amexio-btn [label]=\"'${5:label}'\" [type]=\"'primary'\">
+        \t\t\t\t\t <amexio-btn [label]=\"'${5:label}'\" [type]=\"'primary'\"></amexio-btn>
         \t\t\t\t </div>
         \t\t\t </amexio-pane-action>
         \t\t </amexio-card-pane>
@@ -1360,6 +1365,434 @@
      \t </amexio-dialog>
     """
     description: "Amexio alert dialog box"
+     'amexio-chart-area' :
+            prefix  : 'amexio-chart-area'
+            body : """
+       <amexio-chart-area [data]=\"${1:areaChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] = \"'${3:width}'\">
+       <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+       <amexio-chart-legend [legendPosition]=\"'${5:position}'\"></amexio-chart-legend>
+       </amexio-chart-area>
+       """
+       description: "Amexio Area Chart "
+      "amexio-chart-bar" :
+            prefix  : "amexio-chart-bar"
+            body : """
+        <amexio-chart-bar [data]=\"${1:barChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] = \"'${3:width}'\">
+        <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+        <amexio-chart-legend [legendPosition]=\"'${5:position}'\"></amexio-chart-legend>
+        </amexio-chart-bar>
+       """
+        description: "Amexio Bar Chart "
+      "amexio-chart-stack-bar" :
+             prefix  : "amexio-chart-stack-bar"
+             body : """
+        <amexio-chart-bar [data]=\"${1:barStackChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] = \"'${3:width}'\" [isStacked]=\"true\">
+        <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+        <amexio-chart-legend [legendPosition]=\"'${5:position}'\"></amexio-chart-legend>
+        </amexio-chart-bar>
+       """
+        description: "Amexio Stack Bar Chart "
+      "amexio-chart-bubble" :
+            prefix  : "amexio-chart-bubble"
+            body : """
+        <amexio-chart-bubble [data]=\"${1:bubbleChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] = \"'${3:width}'\">
+        <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+        <amexio-chart-horizontal-axis [title]=\"'${5:title}'\"></amexio-chart-horizontal-axis>
+        <amexio-chart-vertical-axis [title]=\"'${6:title}'\"></amexio-chart-vertical-axis>
+        </amexio-chart-bubble>
+        """
+         description: "Amexio Bubble Chart "
+      "amexio-chart-bubble-ColorAxis" :
+            prefix  : "amexio-chart-bubble-ColorAxis"
+            body : """
+        <amexio-chart-bubble [data]=\"${1:bubbleChartColorAxis}\" [colorAxis]=\"['${2:xAxisColor}','${3:yAxisColor}']\"
+        \t [height]=\"'${4:height}'\"
+        \t [width] = \"'${5:width}'\">
+        <amexio-chart-title [title]=\"'${6:title}'\"></amexio-chart-title>
+        <amexio-chart-horizontal-axis [title]=\"'${7:title}'\"></amexio-chart-horizontal-axis>
+        <amexio-chart-vertical-axis [title]=\"'${8:title}'\"></amexio-chart-vertical-axis>
+        </amexio-chart-bubble>
+        """
+         description: "Amexio Bubble-colorAxis Chart "
+        "amexio-chart-candlestick" :
+            prefix  : "amexio-chart-candlestick"
+            body : """
+       <amexio-chart-candlestick [data]=\"${1:candlestickChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] = \"'${3:width}'\">
+        <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+        </amexio-chart-candlestick>
+       """
+        description: "Amexio candlestick Chart "
+       "amexio-chart-candlestick-waterfall" :
+           prefix  : "amexio-chart-candlestick-waterfall"
+           body : """
+         <amexio-chart-candlestick-waterfall [data]=\"${1:candlestickWaterfallChart}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] =\"'${3:width}'\"
+        \t [barWidthGroup]=\"'${4:barWidthGroup}'\"
+        \t [fallingColorOfBar]=\"'${5:fallingColorOfBar}'\"
+        \t [risingColorOfBar]=\"'${6:fallingColorOfBar}'\">
+        <amexio-chart-title [title]=\"'${7:title}'\"></amexio-chart-title>
+        </amexio-chart-candlestick-waterfall>
+       """
+        description: "Amexio candlestick-waterfall Chart "
+       "amexio-chart-donut" :
+           prefix  : "amexio-chart-donut"
+           body : """
+       <amexio-chart-donut [data]=\"${1:donutChartData}\"
+       \t [height]=\"'${2:height}'\"
+       \t [width] = \"'${3:width}'\">
+       <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+       <amexio-chart-legend [legendPosition]=\"'${5:position}'\"></amexio-chart-legend>
+       </amexio-chart-donut>
+       """
+        description: "Amexio donut Chart "
+    "amexio-chart-column" :
+            prefix  : "amexio-chart-column"
+            body : """
+       <amexio-chart-column [data]=\"${1:columnChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] = \"'${3:width}'\">
+       <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+       <amexio-chart-legend [legendPosition]=\"'${5:position}'\"></amexio-chart-legend>
+       </amexio-chart-column>
+       """
+        description: "Amexio column Chart "
+     "amexio-chart-column-Bar" :
+            prefix  : "amexio-chart-column-Bar"
+            body : """
+       <amexio-chart-column [data]=\"${1:columnStackChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] = \"'${3:width}'\" [isStacked]=\"true\">
+       <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+       <amexio-chart-legend [legendPosition]=\"'${5:position}'\"></amexio-chart-legend>
+       </amexio-chart-column>
+       """
+        description: "Amexio Column-Bar Chart "
+       "amexio-chart-combo" :
+            prefix  : "amexio-chart-combo"
+            body : """
+        <amexio-chart-combo [data]=\"${1:comboChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] = \"'${3:width}'\">
+        <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+        <amexio-chart-legend [legendPosition]=\"'${5:position}'\"></amexio-chart-legend>
+        <amexio-chart-horizontal-axis [title]=\"'${6:title}'\"></amexio-chart-horizontal-axis>
+        <amexio-chart-vertical-axis [title]=\"'${7:title}'\"></amexio-chart-vertical-axis>
+        </amexio-chart-combo>
+        """
+         description: "Amexio combo Chart"
+        "amexio-chart-3D-pie" :
+            prefix  : "amexio-chart-3D-pie"
+            body : """
+          <amexio-chart-pie [data]=\"${1:pieChartData}\"
+          \t [height]=\"'${2:height}'\"
+          \t [width] = \"'${3:width}'\" [is3D]=\"true\">
+          <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+          <amexio-chart-legend [legendPosition]=\"'${5:position}'\"></amexio-chart-legend>
+          </amexio-chart-pie>
+         """
+          description: "Amexio 3D-pie Chart "
+        "amexio-chart-histogram" :
+            prefix  : "amexio-chart-histogram"
+            body : """
+        <amexio-chart-histogram [data]=\"${1:histogramChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] = \"'${3:width}'\">
+        <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+        </amexio-chart-histogram>
+        """
+         description: "Amexio histogram Chart "
+        "amexio-chart-pie" :
+              prefix  : "amexio-chart-pie"
+              body : """
+          <amexio-chart-pie [data]=\"${1:pieChartData}\"
+          \t [height]=\"'${2:height}'\"
+          \t [width] = \"'${3:width}'\">
+          <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+          <amexio-chart-legend [legendPosition]=\"'${5:position}'\"></amexio-chart-legend>
+          </amexio-chart-pie>
+          """
+           description: "Amexio Pie Chart"
+        "amexio-chart-line" :
+            prefix  : "amexio-chart-line"
+            body : """
+        <amexio-chart-line [data]=\"${1:lineChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] = \"'${3:width}'\">
+        <amexio-chart-legend [legendPosition]=\"'${4:position}'\"></amexio-chart-legend>
+        </amexio-chart-line>
+        """
+         description: "Amexio line Chart "
+        "amexio-chart-scatter" :
+            prefix  : "amexio-chart-scatter"
+            body : """
+        <amexio-chart-scatter [data]=\"${1:scatterChartData}\"
+        \t [height]=\"'${2:height}'\">
+        <amexio-chart-title [title]=\"'${3:title}'\"></amexio-chart-title>
+        <amexio-chart-horizontal-axis [title]=\"'${5:title}'\"></amexio-chart-horizontal-axis>
+        <amexio-chart-vertical-axis [title]=\"'${6:title}'\"></amexio-chart-vertical-axis>
+        </amexio-chart-scatter>
+        """
+         description: "Amexio Scatter Chart " 
+        "amexio-chart-timeline" :
+            prefix  : "amexio-chart-timeline"
+            body : """
+        <amexio-chart-timeline [data]=\"${1:timelineChartData}\"
+        \t [width]=\"'${2:width}'\">
+        </amexio-chart-timeline>
+        """
+         description: "Amexio timeline Chart "
+   "amexio-dashboard-gauge" :
+           prefix  : "amexio-dashboard-gauge"
+           body : """
+         <amexio-dashboard-gauge [data]=\"${1:gaugeChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [redColorFrom] =\"${3:redColorFrom}\"
+        \t [redColorTo]=\"${4:redColorTo}\"
+        \t [yellowColorFrom]=\"${5:yellowColorFrom}\"
+        \t [yellowColorTo]=\"${6:yellowColorTo}\"
+        \t [minorTicks]=\"${7:minorTicks}\">
+        </amexio-dashboard-gauge>
+       """
+        description: "Amexio GaugeChart dashboard "
+      "amexio-dashboard-data points" :
+              prefix  : "amexio-dashboard-data points"
+               body : """
+              <div class="row">
+              <div class="col-lg-4">
+               <amexio-datapoints
+               \t [west]=\"true\"
+               \t [center]=\"true\"
+               \t [east]=\"true\"
+               \t [south]=\"true\"
+               \t [backgroundColor]=\"'${1:backgroundColor}'\"
+               \t [fontColor]=\"'${2:fontColor}'\">
+               <amexio-west [contentalign]=\"'${3:contentalign}'\"  [width]=\"'${4:width}'\">
+               <i class="fa fa-line-chart fa-3x"></i>
+               </amexio-west>
+               <amexio-center [contentalign]=\"'${5:contentalign}'\">
+               <amexio-datapoints [north]=\"true\" [center]=\"true\"  [south]=\"true\" >
+               <amexio-north>
+               <span style="color: #ffffff; font-size: 36px; font-weight: bold; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);">200 Million</span>
+               </amexio-north>
+               <amexio-center>
+               <span style="font-size: 20px">Sales Volume</span>
+               </amexio-center>
+               </amexio-datapoints>
+               </amexio-center>
+               <amexio-south [contentalign]=\"'${6:contentalign}'\" [backgroundColor]=\"'${7:backgroundColor}'\">10% More than last year
+               </amexio-south>
+               </amexio-datapoints>
+               </div>
+
+               <div class="col-lg-4">
+               <amexio-datapoints
+               \t [west]=\"true\"
+               \t [center]=\"true\"
+               \t [east]=\"true\"
+               \t [south]=\"true\"
+               \t [backgroundColor]=\"'${1:backgroundColor}'\"
+               \t [fontColor]=\"'${2:fontColor}'\">
+               <amexio-west [contentalign]=\"'${3:contentalign}'\"  [width]=\"'${4:width}'\">
+               <i class="fa fa-line-chart fa-3x"></i>
+               </amexio-west>
+               <amexio-center [contentalign]=\"'${5:contentalign}'\">
+               <amexio-datapoints [north]="true" [center]="true" [south]="true">
+               <amexio-north>
+               <span style="color: #ffffff; font-size: 36px; font-weight: bold; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);">$10 Million</span>
+               </amexio-north>
+               <amexio-center>
+               <span style="font-size: 20px">Sales Revenue</span>
+               </amexio-center>
+               </amexio-datapoints>
+               </amexio-center>
+               <amexio-south [contentalign]=\"'${6:contentalign}'\" [backgroundColor]=\"'${7:backgroundColor}'\">10% More than last year
+               </amexio-south>
+               </amexio-datapoints>
+               </div>
+
+               <div class="col-lg-4">
+               <amexio-datapoints
+               \t [west]=\"true\"
+               \t [center]=\"true\"
+               \t [east]=\"true\"
+               \t [south]=\"true\"
+               \t [backgroundColor]=\"'${1:backgroundColor}'\"
+               \t [fontColor]=\"'${2:fontColor}'\">
+               <amexio-west [contentalign]=\"'${3:contentalign}'\"  [width]=\"'${4:width}'\">
+               <i class="fa fa-line-chart fa-3x"></i>
+               <amexio-center [contentalign]=\"'${5:contentalign}'\">
+               <amexio-datapoints [north]="true" [center]="true" [south]="true">
+               <amexio-north>
+               <span style="color: #ffffff; font-size: 36px; font-weight: bold; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);">$2 Million</span>
+               </amexio-north>
+               <amexio-center>
+               <span style="font-size: 20px">Profit</span>
+               </amexio-center>
+               </amexio-datapoints>
+               </amexio-center>
+               <amexio-south [contentalign]=\"'${6:contentalign}'\" [backgroundColor]=\"'${7:backgroundColor}'\">10% More than last year
+               </amexio-south>
+               </amexio-datapoints>
+               </div>
+               </div>
+               <br>
+
+               <div class="row">
+               <div class="col-lg-3">
+               <amexio-datapoints
+               \t [west]=\"true\"
+               \t [center]=\"true\"
+               \t [east]=\"true\"
+               \t [south]=\"true\"
+               \t [backgroundColor]=\"'${1:backgroundColor}'\"
+               \t [fontColor]=\"'${2:fontColor}'\">
+               <amexio-west [contentalign]=\"'${3:contentalign}'\"  [width]=\"'${4:width}'\">
+               <i class="fa fa-check fa-3x"></i>
+               </amexio-west>
+               <amexio-center [contentalign]=\"'${5:contentalign}'\">
+               <amexio-datapoints [north]="true" [center]="true" [south]="true">
+               <amexio-north>
+               <span style="color: #ffffff; font-size: 36px; font-weight: bold; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);">212</span>
+               </amexio-north>
+               <amexio-center>
+               <span style="font-size: 20px">Closed</span>
+               </amexio-center>
+               </amexio-datapoints>
+               </amexio-center>
+               </amexio-datapoints>
+               </div>
+
+              <div class="col-lg-3">
+               <amexio-datapoints
+               \t [west]=\"true\"
+               \t [center]=\"true\"
+               \t [east]=\"true\"
+               \t [south]=\"true\"
+               \t [backgroundColor]=\"'${1:backgroundColor}'\"
+               \t [fontColor]=\"'${2:fontColor}'\">
+               <amexio-west [contentalign]=\"'${3:contentalign}'\"  [width]=\"'${4:width}'\">
+               <i class="fa fa-envelope-open-o fa-3x"></i>
+               </amexio-west>
+               <amexio-center [contentalign]=\"'${5:contentalign}'\">
+               <amexio-datapoints [north]="true" [center]="true" [south]="true">
+               <amexio-north>
+               <span style="color: #ffffff; font-size: 36px; font-weight: bold; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);">20</span>
+               </amexio-north>
+               <amexio-center>
+               <span style="font-size: 20px">Open</span>
+               </amexio-center>
+               </amexio-datapoints>
+               </amexio-center>
+               </amexio-datapoints>
+               </div>
+
+               <div class="col-lg-2">
+               <amexio-datapoints
+               \t [west]=\"true\"
+               \t [center]=\"true\"
+               \t [east]=\"true\"
+               \t [south]=\"true\"
+               \t [backgroundColor]=\"'${1:backgroundColor}'\"
+               \t [fontColor]=\"'${2:fontColor}'\">
+               <amexio-west [contentalign]=\"'${3:contentalign}'\"  [width]=\"'${4:width}'\">
+               <i class="fa fa-bolt fa-3x"></i>
+               </amexio-west>
+               <amexio-center [contentalign]=\"'${5:contentalign}'\">
+               <amexio-datapoints [north]="true" [center]="true" [south]="true">
+               <amexio-north>
+               <span style="color: #ffffff; font-size: 36px; font-weight: bold; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);">3</span>
+               </amexio-north>
+               <amexio-center>
+               <span style="font-size: 20px">High</span>
+               </amexio-center>
+               </amexio-datapoints>
+               </amexio-center>
+               </amexio-datapoints>
+               </div>
+
+               <div class="col-lg-2">
+               <amexio-datapoints
+               \t [west]=\"true\"
+               \t [center]=\"true\"
+               \t [east]=\"true\"
+               \t [south]=\"true\"
+               \t [backgroundColor]=\"'${1:backgroundColor}'\"
+               \t [fontColor]=\"'${2:fontColor}'\">
+               <amexio-west [contentalign]=\"'${3:contentalign}'\"  [width]=\"'${4:width}'\">
+               <i class="fa fa-medium fa-3x"></i>
+               </amexio-west>
+               <amexio-center [contentalign]=\"'${5:contentalign}'\">
+               <amexio-datapoints [north]="true" [center]="true" [south]="true">
+               <amexio-north>
+               <span style="color: #ffffff; font-size: 36px; font-weight: bold; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);">7</span>
+               </amexio-north>
+               <amexio-center>
+               <span style="font-size: 20px">Medium</span>
+               </amexio-center>
+               </amexio-datapoints>
+               </amexio-center>
+               </amexio-datapoints>
+               </div>
+
+               <div class="col-lg-2">
+               <amexio-datapoints
+               \t [west]=\"true\"
+               \t [center]=\"true\"
+               \t [east]=\"true\"
+               \t [south]=\"true\"
+               \t [backgroundColor]=\"'${1:backgroundColor}'\"
+               \t [fontColor]=\"'${2:fontColor}'\">
+               <amexio-west [contentalign]=\"'${3:contentalign}'\"  [width]=\"'${4:width}'\">
+               <i class="fa fa-low-vision fa-3x"></i>
+               </amexio-west>
+               <amexio-center [contentalign]=\"'${5:contentalign}'\">
+               <amexio-datapoints [north]="true" [center]="true" [south]="true">
+               <amexio-north>
+               <span style="color: #ffffff; font-size: 36px; font-weight: bold; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);">10</span>
+               </amexio-north>
+               <amexio-center>
+               <span style="font-size: 20px">Low</span>
+               </amexio-center>
+               </amexio-datapoints>
+               </amexio-center>
+               </amexio-datapoints>
+               </div>
+               </div>
+           """
+            description: "Amexio Data points dashboard "
+     "amexio-map-geo-chart" :
+            prefix  : "amexio-map-geo-chart"
+            body : """
+        <amexio-map-geo-chart [data]=\"${1:geoChartData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width]=\"'${3:width}'\">
+        </amexio-map-geo-chart>
+        """
+        description: "Amexio Geo-Chart map "
+      "amexio-map-treemap" :
+           prefix  : "amexio-map-treemap"
+           body : """
+         <amexio-map-treemap [data]=\"${1:treeMapData}\"
+        \t [height]=\"'${2:height}'\"
+        \t [width] =\"'${3:width}'\"
+        \t [maxColor]=\"'${4:maxColor}'\"
+        \t [midColor]=\"'${5:midColor}'\"
+        \t [minColor]=\"'${6:midColor}'\"
+        \t [maxPostDepth]=\"${7:maxPostDepth}\" [showScale]=\"true\">
+        </amexio-map-treemap>
+        """
+        description: "Amexio Treemap map "
   "class":
     prefix:"class"
     body:"""
