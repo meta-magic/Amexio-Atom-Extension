@@ -796,11 +796,63 @@
     prefix: "amexio-rating"
     body: """
       <amexio-rating-input [(ngModel)]=\"${1:ngModel}\"
-      \t [max]=\"'${2:max}'\" name=\"${3:name}\"
-      \t [readonly]=\"'${4:readonly}'\"
-      \t [percentageLabel]=\"'${5:percentageLabel}'\"></amexio-rating-input>
+      \t [max]=\"${2:max}\" name=\"${3:name}\"
+      \t [readonly]=\"'${4:readonly}'\"></amexio-rating-input>
       """
     description: "Amexio Rating"
+  "Sni-fieldset":
+    prefix: "Sni-fieldset"
+    body: """
+     <amexio-fieldset [collapsible]=\"true\" [title]=\"'${1:title}'\">
+     \t<amexio-fieldset-body>
+     \t\t<div class="form-group row">
+     \t\t\t<div class="col-6">
+     \t\t\t<amexio-text-input [fieldLabel]=\"'${2:fieldLabel}'\"
+     \t\t\t\tname =\"name\"
+     \t\t\t\t[placeholder]=\"'${3:placeholder}'\"
+     \t\t\t\t[iconFeedBack]=\"true\">
+     \t\t\t</amexio-text-input>
+     \t\t\t</div>
+     \t\t\t<div class="col-6">
+     \t\t\t<amexio-text-input [fieldLabel]=\"'${4:fieldLabel}'\" name =\"name\"
+     \t\t\t\t[placeholder]=\"'${5:placeholder}'\"
+     \t\t\t\t[iconFeedBack]=\"true\">
+     \t\t\t</amexio-text-input>
+     \t\t\t</div>
+     \t\t\t<div class="col-6">
+     \t\t\t<amexio-text-input [fieldLabel]=\"'${6:fieldLabel}'\" name =\"name\"
+     \t\t\t\t[placeholder]=\"'${7:placeholder}'\"
+     \t\t\t\t[iconFeedBack]=\"true\">
+     \t\t\t</amexio-text-input>
+     \t\t\t</div>
+     \t\t\t<div class="col-6">
+    \t\t\t<amexio-email-input [fieldLabel]=\"'${8:fieldLabel}'\" name =\"email\"
+     \t\t\t\t[placeholder]=\"'${9:placeholder}'\"
+     \t\t\t\t[allowBlank]=\"false\" [errorMsg] =\"'${10:errorMsg}'\"
+     \t\t\t\t[iconFeedBack]=\"true\">
+     \t\t\t</amexio-email-input>
+     \t\t\t</div>
+     \t\t\t<div class="col-12">
+     \t\t\t<amexio-textarea-input [fieldLabel]=\"'${11:fieldLabel}'\"
+     \t\t\tname =\"name\"
+     \t\t\t\t[placeholder]=\"'${12:placeholder}'\"
+     \t\t\t\t[errorMsg] =\"'${13:errorMsg}'\"
+     \t\t\t\t[iconFeedBack]=\"true\" [noOfrows]=\"'${14:noOfrows}'\"
+     \t\t\t\t[noOfCols]=\"'${15:noOfCols}'\"
+     \t\t\t\t[popoverPlacement]=\"'top'\">
+     \t\t\t\t</amexio-textarea-input>
+     \t\t\t</div>
+     \t\t\t<div class="col-12">
+     \t\t\t<div class="col-md-2 offset-md-10"><amexio-btn [label]=\"'Save'\"
+     \t\t\t[type]=\"'primary'\" [tooltipMessage]=\"'save'\">
+     \t\t\t</amexio-btn>
+     \t\t\t</div>
+     \t\t\t</div>
+     \t\t</div>
+     \t</amexio-fieldset-body>
+     </amexio-fieldset>
+     """
+    description: "Amexio fieldset"
   "amexio-date-picker":
     prefix: "amexio-date-picker"
     body: """
@@ -2447,7 +2499,6 @@ Description:"Amexio Chart ColorAxis"
   public max:number = ${4:maxRating};
   public rate:number = ${5:rating};
   public isReadonly:boolean = false;
-  public isPercent:boolean = true;
   constructor() {}
   ngOnInit() {}
   }
@@ -2859,8 +2910,8 @@ Description:"Amexio Chart ColorAxis"
        [{"dataType":${5:'dataType1'},"label":${6:'label1'}},
        {"dataType":${7:'dataType2'},"label":${8:'label2'}},
        {"dataType":${9:'dataType3'},"label":${10:'label3'}}],
-       ${11:[Enter Chart Data]};
-       ]
+       ${11:Enter Chart Data}
+       ];
        }
        ngOnInit() {
        }
@@ -2882,8 +2933,8 @@ Description:"Amexio Chart ColorAxis"
         [{"dataType":${5:'dataType1'},"label":${6:'label1'}},
         {"dataType":${7:'dataType2'},"label":${8:'label2'}},
         {"dataType":${9:'dataType3'},"label":${10:'label3'}}],
-        ${11:[Enter Chart Data]};
-        ]
+        ${11:Enter Chart Data};
+        ];
         }
         ngOnInit() {
         }
@@ -2905,8 +2956,8 @@ Description:"Amexio Chart ColorAxis"
         [{"dataType":${5:'dataType1'},"label":${6:'label1'}},
         {"dataType":${7:'dataType2'},"label":${8:'label2'}},
         {"dataType":${9:'dataType3'},"label":${10:'label3'}}],
-        ${11:[Enter Chart Data]};
-        ]
+        ${11:Enter Chart Data}
+        ];
         }
         ngOnInit() {
         }
