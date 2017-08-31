@@ -800,8 +800,8 @@
       \t [readonly]=\"'${4:readonly}'\"></amexio-rating-input>
       """
     description: "Amexio Rating"
-  "Sni-fieldset":
-    prefix: "Sni-fieldset"
+  "amexio-fieldset":
+    prefix: "amexio-fieldset"
     body: """
      <amexio-fieldset [collapsible]=\"true\" [title]=\"'${1:title}'\">
      \t<amexio-fieldset-body>
@@ -853,6 +853,36 @@
      </amexio-fieldset>
      """
     description: "Amexio fieldset"
+  "amexio-listbox" :
+    prefix  : "amexio-listbox"
+    body : """
+       <amexio-listbox [data]=\"${1:bindData}\" [filter]=\"true\"
+       \t[enableCheckbox] = \"false\" [dataReader]=\"'response.data'\"
+       \t[displayField]=\"'${2:displayField}'\"
+       \t(selectedRows)="onSelect($event)"
+       \t(rowClick)="onSelect($event)">
+       \t<ng-template #amexioBodyTmpl let-row="row">
+       <table>
+       <tr>
+       <td>
+       <img class="rounded-circle" width="70"
+       \tsrc=\"assets/images/profile/{{row.profile}}\"/>
+       </td>
+       <td style="padding: 20px; vertical-align: top;">
+       <b>{{row.name}}</b>
+       </td>
+       </tr>
+       </table>
+       </ng-template>
+       </amexio-listbox>
+       <amexio-card-pane [enableFooter]="false">
+       <amexio-pane-header>Selected data</amexio-pane-header>
+       <amexio-pane-body>
+       <pre>{{selectedData | json}}</pre>
+       </amexio-pane-body>
+       </amexio-card-pane>
+      """
+    description: "Amexio listbox"
   "amexio-date-picker":
     prefix: "amexio-date-picker"
     body: """
@@ -2504,6 +2534,31 @@ Description:"Amexio Chart ColorAxis"
   }
   }
  """
+  "Amexio Listbox":
+    prefix: "Amexio-ts-Listbox"
+    description: "Amexio Listbox"
+    body: """
+       import {Component, OnInit} from '@angular/core';
+
+         @Component({
+         \tselector: '${1:selector-name}',
+         \ttemplateUrl: '${2:name}.component.html'
+         })
+
+         export class ${3:Name}Component implements OnInit {
+         \t${4:record}:string;
+         \t${5:bindData} : any;
+         \t${6:selectedData} : any;
+         \tconstructor(){
+         \tthis.${5:bindData} = {json}
+         }
+         ngOnInit(){
+         }
+         \tonSelectedData(${7:Data} : any){
+         \t\tthis.${6:selectedData} = ${7:Data};
+         }
+         }
+      """
   "Amexio DateTime":
     prefix: "Amexio-ts-Date-Time"
     description: "Amexio Date-Time Picker"
@@ -2933,7 +2988,7 @@ Description:"Amexio Chart ColorAxis"
         [{"dataType":${5:'dataType1'},"label":${6:'label1'}},
         {"dataType":${7:'dataType2'},"label":${8:'label2'}},
         {"dataType":${9:'dataType3'},"label":${10:'label3'}}],
-        ${11:Enter Chart Data};
+        ${11:Enter Chart Data}
         ];
         }
         ngOnInit() {
