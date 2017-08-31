@@ -852,7 +852,7 @@
      \t</amexio-fieldset-body>
      </amexio-fieldset>
      """
-    description: "Amexio fieldset"
+    description: "Amexio Fieldset"
   "amexio-listbox" :
     prefix  : "amexio-listbox"
     body : """
