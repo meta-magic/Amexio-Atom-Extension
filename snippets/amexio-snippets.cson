@@ -1159,9 +1159,9 @@
       </amexio-sidemenubar>
       """
     description: "Amexio Menubar Side with Template"
-"amexio-menubar-right-side":
-  prefix: "amexio-menubar-right-side"
-  body: """
+  "amexio-menubar-right-side":
+    prefix: "amexio-menubar-right-side"
+    body: """
       <amexio-sidemenubar
       \t [httpMethod]=\"'${3:httpMethod}'\"
       \t [httpUrl]=\"'${4:httpUrl}'\"
@@ -1179,24 +1179,7 @@
       \t</ng-template>
       </amexio-sidemenubar>
       """
-description: "Amexio menubar-right-side"
-"amexio-menubar-side-at-bottom" :
-  prefix: "amexio--menubar-horizontal-at-bottom"
-  body: """
-      <amexio-sidemenubar
-      \t [dataReader]=\"'${1:dataReader}'\"
-      \t [httpMethod]=\"'${2:httpMethod}'\"
-      \t [httpUrl]=\"'${3:httpUrl}'\"
-      \t [bottom]=\"true\">
-      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${4:navHeader1}\">
-      \t\t<span [attr.class]=\"${5:attrClass}\">{{${6:text1}}</span>
-      \t</ng-template>
-      <ng-template #amexioNavHeaderTmpl  let-navHeader=\"${7:navHeader1}\">
-      \t\t<span [attr.class]=\"${8:attrClass}\">{{${9:text2}}}</span>
-      \t</ng-template>
-      </amexio-sidemenubar>
-      """
-  description: "Amexio Menubar Side at Bottom"
+    description: "Amexio menubar-right-side"
   "amexio-notification-info":
     prefix: "amexio-notification-info"
     body: """
@@ -1250,10 +1233,10 @@ description: "Amexio menubar-right-side"
     prefix: "amexio-window-pane"
     body: """
         <amexio-btn [label]=\"'${1:btnLabel}'\" [type]=\"'default'\"
-         [tooltipMessage]=\"'${2:tooltipMessage}'\" (click)=\"toggle()\">
-       </amexio-btn>
+        [tooltipMessage]=\"'${2:tooltipMessage}'\" (click)=\"toggle()\">
+        </amexio-btn>
         <amexio-window-pane [(showWindow)]=\"${3:flag}\"
-      [title]=\"'${4:title}'\" [closable]=\"true\">
+        [title]=\"'${4:title}'\" [closable]=\"true\">
         \t<amexio-pane-body>
         \t\t<form>
         \t\t\t<div class=\"form-group\">
@@ -1282,33 +1265,33 @@ description: "Amexio menubar-right-side"
         \t\t</div>
         \t</amexio-pane-action>
         </amexio-window-pane>
-    """
+        """
     description: "Amexio Window Pane"
   "amexio-window-pane-large-small":
     prefix: "amexio-window-pane-large-small"
     body: """
-      <amexio-btn-group>
+        <amexio-btn-group>
         \t<amexio-btn-group-action [label]=\"'${1:label1}'\"
-          [type]=\"'default'\"(onClick)=\"small()\" >
+        [type]=\"'default'\"(onClick)=\"small()\" >
         \t</amexio-btn-group-action>
         \t<amexio-btn-group-action [label]=\"'${2:label2}'\"
-          [type]=\"'primary'\"(onClick)=\"large()\">
+        [type]=\"'primary'\"(onClick)=\"large()\">
         \t</amexio-btn-group-action>
         </amexio-btn-group>
         <amexio-window-pane [(showWindow)]=\"${3:flag}\"
-         [title]=\"'${4:title}'\"
-       [closable]=\"true\" [size]=\"size\">
+        [title]=\"'${4:title}'\"
+        [closable]=\"true\" [size]=\"size\">
         \t<amexio-pane-body>
         \t\t <form>
         \t\t\t <div class=\"form-group\">
         \t\t\t\t <amexio-text-input [fieldLabel]=\"'${5:fieldLabel}'\"
-         name =\"name\"
+        name =\"name\"
         \t\t\t\t   [placeholder]=\"'${6:placeholder}'\" [iconFeedBack]=\"true\">
         \t\t\t\t </amexio-text-input>
         \t\t\t </div>
         \t\t\t <div class=\"form-group\">
         \t\t\t\t <amexio-text-input [fieldLabel]=\"'${7:fieldLabel}'\"
-         name =\"name\"
+        name =\"name\"
         \t\t\t\t  [placeholder]=\"'${8:placeholder}'\" [iconFeedBack]=\"true\">
         \t\t\t\t </amexio-text-input>
         \t\t\t </div>
@@ -1327,8 +1310,8 @@ description: "Amexio menubar-right-side"
         \t\t</div>
         \t</amexio-pane-action>
         </amexio-window-pane>
-    """
-    description: "Amexio Window Pane"
+        """
+    description: "Amexio Window Pane-large-small"
   "amexio-image-card":
     prefix: "amexio-image-card"
     body: """
@@ -1352,7 +1335,7 @@ description: "Amexio menubar-right-side"
         \t\t </amexio-card-pane>
         \t </div>
         </div>
-    """
+        """
     description: "Amexio Image Card "
   "amexio-image-card-with-header":
     prefix: "amexio-image-card-with-header"
@@ -1369,7 +1352,7 @@ description: "Amexio menubar-right-side"
         \t </amexio-card-pane>
         \t </div>
         </div>
-    """
+        """
     description: "Amexio Image Card with header"
   "amexio-form-card":
     prefix: "amexio-form-card"
@@ -1410,43 +1393,43 @@ description: "Amexio menubar-right-side"
         \t </div>
         \t\t </amexio-pane-action>
         </amexio-card-pane>
-    """
+        """
     description: "Amexio Form Card "
   "amexio-dialog-box-confirmation":
     prefix: "amexio-dialog-box-confirmation"
     body: """
-        <amexio-btn [label]=\"'${1:label}'\" [type]=\"'default'\"
+         <amexio-btn [label]=\"'${1:label}'\" [type]=\"'default'\"
          [tooltipMessage]=\"'${2:tooltipMessage}'\" (click)=\"toggle()\">
          </amexio-btn>
          Confirmation Click Status : <b>{{confirmStatus}}</b>
-        \t <amexio-dialog [title]=\"'${3:title}'\" [(showWindow)]=\"flag\"
+         \t <amexio-dialog [title]=\"'${3:title}'\" [(showWindow)]=\"flag\"
          [dialogType]=\"2\"
-        \t (actionStatus)=\"checkStatus($event)\"
+         \t (actionStatus)=\"checkStatus($event)\"
          [primaryActionLabel]=\"'${4:primaryActionLabel}'\"
-        \t [secondaryActionLabel]=\"'${5:secondaryActionLabel}'\">
-        \t\t <amexio-pane-body>
-        \t\t\t <p style=\"margin: 30px; text-align: center;\">
-        ${6:ConfirmationMsg}</p>
-        \t\t </amexio-pane-body>
-        \t </amexio-dialog>
-    """
+         \t [secondaryActionLabel]=\"'${5:secondaryActionLabel}'\">
+         \t\t <amexio-pane-body>
+         \t\t\t <p style=\"margin: 30px; text-align: center;\">
+         ${6:ConfirmationMsg}</p>
+         \t\t </amexio-pane-body>
+         \t </amexio-dialog>
+         """
     description: "Amexio confirmation dialog box"
   "amexio-dialog-box-alert":
     prefix: "amexio-dialog-box-alert"
     body: """
-    <amexio-btn [label]=\"'${1:label}'\" [type]=\"'default'\"
+      <amexio-btn [label]=\"'${1:label}'\" [type]=\"'default'\"
       [tooltipMessage]=\"'${2:tooltipMessage}'\" (click)=\"toggle()\">
-       </amexio-btn>
+      </amexio-btn>
       Alert Click Status : <b>{{alertStatus}}</b>
-     \t <amexio-dialog [title]=\"'${3:title}'\" [(showWindow)]=\"flag\"
+      \t <amexio-dialog [title]=\"'${3:title}'\" [(showWindow)]=\"flag\"
       [dialogType]=\"1\"
-     \t (actionStatus)=\"checkStatus($event)\"
+      \t (actionStatus)=\"checkStatus($event)\"
       [primaryActionLabel]=\"'${4:primaryActionLabel}'\">
-     \t\t <amexio-pane-body>
-     \t\t\t <p style=\"margin: 30px; text-align: center;\">${5:alertMsg}</p>
-     \t\t </amexio-pane-body>
-     \t </amexio-dialog>
-    """
+      \t\t <amexio-pane-body>
+      \t\t\t <p style=\"margin: 30px; text-align: center;\">${5:alertMsg}</p>
+      \t\t </amexio-pane-body>
+      \t </amexio-dialog>
+      """
     description: "Amexio alert dialog box"
   "amexio-chart-area" :
     prefix: "amexio-chart-area"
@@ -1454,15 +1437,15 @@ description: "Amexio menubar-right-side"
        <amexio-chart-area [data]=\"${1:areaChartData}\"
         \t [height]=\"'${2:height}'\"
         \t [width] = \"'${3:width}'\">
-       <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
-       <amexio-chart-legend [legendPosition]=\"'${5:position}'\">
-       </amexio-chart-legend>
-       </amexio-chart-area>
-       """
+        <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
+        <amexio-chart-legend [legendPosition]=\"'${5:position}'\">
+        </amexio-chart-legend>
+        </amexio-chart-area>
+        """
     description: "Amexio area chart"
-"amexio-chart-bar" :
-  prefix: "amexio-chart-bar"
-  body: """
+  "amexio-chart-bar" :
+    prefix: "amexio-chart-bar"
+    body: """
         <amexio-chart-bar [data]=\"${1:barChartData}\"
         \t [height]=\"'${2:height}'\"
         \t [width] = \"'${3:width}'\">
@@ -1470,11 +1453,11 @@ description: "Amexio menubar-right-side"
         <amexio-chart-legend [legendPosition]=\"'${5:position}'\">
         </amexio-chart-legend>
         </amexio-chart-bar>
-       """
-  description: "Amexio Bar Chart "
-"amexio-chart-stack-bar" :
-  prefix: "amexio-chart-stack-bar"
-  body: """
+        """
+    description: "Amexio Bar Chart "
+  "amexio-chart-stack-bar" :
+    prefix: "amexio-chart-stack-bar"
+    body: """
         <amexio-chart-bar [data]=\"${1:barStackChartData}\"
         \t [height]=\"'${2:height}'\"
         \t [width] = \"'${3:width}'\" [isStacked]=\"true\">
@@ -1482,11 +1465,11 @@ description: "Amexio menubar-right-side"
         <amexio-chart-legend [legendPosition]=\"'${5:position}'\">
         </amexio-chart-legend>
         </amexio-chart-bar>
-       """
-  description: "Amexio Stack Bar Chart "
-"amexio-chart-bubble" :
-  prefix  : "amexio-chart-bubble"
-  body : """
+        """
+    description: "Amexio Stack Bar Chart "
+  "amexio-chart-bubble" :
+    prefix  : "amexio-chart-bubble"
+    body : """
         <amexio-chart-bubble [data]=\"${1:bubbleChartData}\"
         \t [height]=\"'${2:height}'\"
         \t [width] = \"'${3:width}'\">
@@ -1497,7 +1480,7 @@ description: "Amexio menubar-right-side"
         </amexio-chart-vertical-axis>
         </amexio-chart-bubble>
         """
-  description: "Amexio Bubble Chart"
+    description: "Amexio Bubble Chart"
   "amexio-chart-bubble-ColorAxis" :
     prefix  : "amexio-chart-bubble-ColorAxis"
     body : """
@@ -1512,20 +1495,20 @@ description: "Amexio menubar-right-side"
         </amexio-chart-vertical-axis>
         </amexio-chart-bubble>
         """
-Description:"Amexio Chart ColorAxis"
-"amexio-chart-candlestick" :
-  prefix  : "amexio-chart-candlestick"
-  body : """
+    description:"Amexio Chart ColorAxis"
+  "amexio-chart-candlestick" :
+    prefix  : "amexio-chart-candlestick"
+    body : """
        <amexio-chart-candlestick [data]=\"${1:candlestickChartData}\"
         \t [height]=\"'${2:height}'\"
         \t [width] = \"'${3:width}'\">
         <amexio-chart-title [title]=\"'${4:title}'\"></amexio-chart-title>
         </amexio-chart-candlestick>
-"""
-  description:"Amexio candlestick Chart"
-"amexio-chart-waterfall" :
-  prefix: "amexio-chart-candlestick-waterfall"
-  body : """
+        """
+    description:"Amexio candlestick Chart"
+  "amexio-chart-waterfall" :
+    prefix: "amexio-chart-candlestick-waterfall"
+    body : """
          <amexio-chart-candlestick-waterfall
          [data]=\"${1:candlestickWaterfallChart}\"
         \t [height]=\"'${2:height}'\"
@@ -1535,8 +1518,8 @@ Description:"Amexio Chart ColorAxis"
         \t [risingColorOfBar]=\"'${6:fallingColorOfBar}'\">
         <amexio-chart-title [title]=\"'${7:title}'\"></amexio-chart-title>
         </amexio-chart-candlestick-waterfall>
-       """
-  description:"Amexio candlestick-waterfall Chart "
+        """
+    description:"Amexio candlestick-waterfall Chart "
   "amexio-chart-donut" :
     prefix  : "amexio-chart-donut"
     body : """
@@ -1547,11 +1530,11 @@ Description:"Amexio Chart ColorAxis"
        <amexio-chart-legend [legendPosition]=\"'${5:position}'\">
        </amexio-chart-legend>
        </amexio-chart-donut>
-     """
+       """
     description: "Amexio donut Chart "
-    "amexio-chart-column" :
-      prefix  : "amexio-chart-column"
-      body : """
+  "amexio-chart-column" :
+    prefix  : "amexio-chart-column"
+    body : """
        <amexio-chart-column [data]=\"${1:columnChartData}\"
         \t [height]=\"'${2:height}'\"
         \t [width] = \"'${3:width}'\">
@@ -1560,7 +1543,7 @@ Description:"Amexio Chart ColorAxis"
        </amexio-chart-legend>
        </amexio-chart-column>
        """
-      description: "Amexio column Chart "
+    description: "Amexio column Chart "
   "amexio-chart-column-Bar" :
     prefix: "amexio-chart-column-Bar"
     body : """
@@ -1571,7 +1554,7 @@ Description:"Amexio Chart ColorAxis"
        <amexio-chart-legend [legendPosition]=\"'${5:position}'\">
        </amexio-chart-legend>
        </amexio-chart-column>
-     """
+       """
     description: "Amexio Column-Bar Chart "
   "amexio-chart-combo" :
     prefix  : "amexio-chart-combo"
@@ -1599,7 +1582,7 @@ Description:"Amexio Chart ColorAxis"
           <amexio-chart-legend [legendPosition]=\"'${5:position}'\">
           </amexio-chart-legend>
           </amexio-chart-pie>
-         """
+          """
     description: "Amexio 3D-pie Chart "
   "amexio-chart-histogram" :
     prefix  : "amexio-chart-histogram"
@@ -1611,9 +1594,9 @@ Description:"Amexio Chart ColorAxis"
         </amexio-chart-histogram>
         """
     description: "Amexio histogram Chart"
-    "amexio-chart-pie" :
-      prefix  : "amexio-chart-pie"
-      body : """
+  "amexio-chart-pie" :
+    prefix  : "amexio-chart-pie"
+    body : """
           <amexio-chart-pie [data]=\"${1:pieChartData}\"
           \t [height]=\"'${2:height}'\"
           \t [width] = \"'${3:width}'\">
@@ -1622,7 +1605,7 @@ Description:"Amexio Chart ColorAxis"
           </amexio-chart-legend>
           </amexio-chart-pie>
           """
-  Description: "Amexio chart pie"
+    description: "Amexio chart pie"
   "amexio-chart-line" :
     prefix  : "amexio-chart-line"
     body : """
@@ -1634,9 +1617,9 @@ Description:"Amexio Chart ColorAxis"
         </amexio-chart-line>
         """
     description: "Amexio line chart"
-"amexio-chart-scatter" :
-  prefix: "amexio-chart-scatter"
-  body : """
+  "amexio-chart-scatter" :
+    prefix: "amexio-chart-scatter"
+    body : """
         <amexio-chart-scatter [data]=\"${1:scatterChartData}\"
         \t [height]=\"'${2:height}'\">
         <amexio-chart-title [title]=\"'${3:title}'\"></amexio-chart-title>
@@ -1646,7 +1629,7 @@ Description:"Amexio Chart ColorAxis"
         </amexio-chart-vertical-axis>
         </amexio-chart-scatter>
         """
-  description: "Amexio Scatter Chart "
+    description: "Amexio Scatter Chart "
   "amexio-chart-timeline" :
     prefix  : "amexio-chart-timeline"
     body : """
@@ -1654,10 +1637,10 @@ Description:"Amexio Chart ColorAxis"
         \t [width]=\"'${2:width}'\">
         </amexio-chart-timeline>
         """
-   Description: "Amexio timeline Chart"
-   "amexio-dashboard-gauge" :
-     prefix: "amexio-dashboard-gauge"
-     body : """
+    description: "Amexio timeline Chart"
+  "amexio-dashboard-gauge" :
+    prefix: "amexio-dashboard-gauge"
+    body : """
          <amexio-dashboard-gauge [data]=\"${1:gaugeChartData}\"
         \t [height]=\"'${2:height}'\"
         \t [redColorFrom] =\"${3:redColorFrom}\"
@@ -1667,7 +1650,7 @@ Description:"Amexio Chart ColorAxis"
         \t [minorTicks]=\"${7:minorTicks}\">
         </amexio-dashboard-gauge>
        """
-     Description: "Amexio gaugeChart dashboard "
+    description: "Amexio gaugeChart dashboard "
   "amexio-dashboard-data points" :
     prefix  : "amexio-dashboard-data points"
     body : """
@@ -1894,17 +1877,17 @@ Description:"Amexio Chart ColorAxis"
                </amexio-datapoints>
                </div>
                </div>
-           """
+               """
     description: "Amexio Data points dashboard "
-    "amexio-map-geo-chart" :
-      prefix  : "amexio-map-geo-chart"
-      body : """
+  "amexio-map-geo-chart" :
+    prefix  : "amexio-map-geo-chart"
+    body : """
         <amexio-map-geo-chart [data]=\"${1:geoChartData}\"
         \t [height]=\"'${2:height}'\"
         \t [width]=\"'${3:width}'\">
         </amexio-map-geo-chart>
         """
-    Description: "Amexio Geo-Chart map"
+    description: "Amexio Geo-Chart map"
   "amexio-map-treemap" :
     prefix  : "amexio-map-treemap"
     body : """
@@ -2879,10 +2862,10 @@ Description:"Amexio Chart ColorAxis"
       ngOnInit() {}
     }
     """
-"Amexio map":
-  prefix: "Amexio-ts-map"
-  description: "Amexio map"
-  body: """
+  "Amexio map":
+    prefix: "Amexio-ts-map"
+    description: "Amexio map"
+    body: """
           import {Component, OnInit} from '@angular/core';
           @Component({
           \tselector: '${1:selector-name}',
@@ -2948,7 +2931,7 @@ Description:"Amexio Chart ColorAxis"
       ngOnInit() {
       }
       }
-  """
+    """
   "Amexio Line Charts":
     prefix: "Amexio-ts-Chart-Line"
     description: "Amexio Line Chart"
