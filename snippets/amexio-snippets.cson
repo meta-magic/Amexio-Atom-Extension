@@ -3874,3 +3874,23 @@
   }
   }
   '''
+  "Amexio-ts-Text-label":
+    prefix: "Amexio-ts-Text-label"
+    body: '''
+    import { Component, OnInit } from '@angular/core';
+    \t @Component({
+    \t selector: '${1:name}',
+    \t templateUrl: '${2:name}.component.html',
+    \t styleUrls: ['${3:name}.component.css']
+    \t })
+    \t@NgModule({
+    \timports: [],
+    \texports: [],
+    \tdeclarations : [],
+    \tproviders : []
+    \t})
+    \t export class ${4:className} implements OnInit {
+    \t constructor(){ }
+    \t ngOnInit() { }
+    \t}
+    '''
