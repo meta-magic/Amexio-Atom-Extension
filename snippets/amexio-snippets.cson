@@ -1772,8 +1772,8 @@
   </amexio-datagrid>
   '''
     description: "Amexio data grid Groupby"
-  "amexio-Scroll-data-groupby":
-    prefix: "amexio-data-scroll-groupby"
+  "amexio-Scroll-data-grid":
+    prefix: "amexio-scroll-data-grid"
     body: '''
   <amexio-datagrid
     \t[enable-column-fiter]=\"true\" [height]=\"${1:height}\"
@@ -1790,7 +1790,7 @@
     \t</amexio-data-table-column>
   </amexio-datagrid
   '''
-    description: "Amexio Data Groupby Scroll"
+    description: "Amexio Data Scroll Data Grid"
   "amexio-treedata-grid":
     prefix: "amexio-treedata-grid"
     body: '''
