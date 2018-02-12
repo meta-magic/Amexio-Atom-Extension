@@ -113,6 +113,7 @@
   \t\t\t <ng-template let-img amexioTemplate=\"${3:item}\">
   \t\t\t\t <amexio-image [height]=\"'${4:height}'\"
   \t\t\t\t path=\"{{img}}\">
+  \t\t\t\t </amexio-image>
   \t\t\t </ng-template>
   </amexio-carousel>
   '''
@@ -127,6 +128,7 @@
   \t\t\t <ng-template let-img amexioTemplate=\"${3:item}\">
   \t\t\t\t <amexio-image [height]=\"'${4:height}'\"
   \t\t\t\t path=\"{{img}}\">
+  \t\t\t\t </amexio-image>
   \t\t\t </ng-template>
   </amexio-carousel>
   '''
