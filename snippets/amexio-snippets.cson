@@ -469,7 +469,7 @@
   \t[tooltip]=\"'${2:tooltip}'\">
   </amexio-image>
   '''
-    description: "Amexio Icon form font-awesome "
+    description: "Amexio Image "
   "amexio-image-icon-mdb":
     prefix: "amexio-image-icon-mdb"
     body: '''
@@ -478,7 +478,7 @@
   \t[tooltip]=\"'${2:tooltip}'\">
   </amexio-image>
   '''
-    description: "Amexio Icon form material design "
+    description: "Amexio Image Icon material design "
   "amexio-video":
     prefix: "amexio-video"
     body: '''
@@ -1907,7 +1907,7 @@
     \t\t\t\t\t\t\t\t\t\t</amexio-image>
     \t\t\t\t\t</amexio-column>
     \t\t\t\t\t<amexio-column
-    \t\t\t\t\t\t\t[size]=\"'${11:size}'\">{{json}}
+    \t\t\t\t\t\t\t[size]=\"'${11:size}'\">
     \t\t\t\t\t\t\t{{row.name}}
     \t\t\t\t\t</amexio-column>
   </amexio-row>
