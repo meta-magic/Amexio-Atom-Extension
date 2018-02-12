@@ -2416,7 +2416,7 @@
   exports: [],
   declarations : []
   })
-  export class ${3:Name}Component implements OnInit {
+  export class ${4:name}Component implements OnInit {
   \tconstructor() { }
 
   \tngOnInit() { }$0
@@ -2439,7 +2439,7 @@
   \tdeclarations : [],
   \tproviders : []
   })
-  \t export class ${4:className} implements OnInit{
+  \t export class ${4:name}Component implements OnInit{
   \t constructor(){ }
   \t //Checkbox click event
   \t ${5:functionName}(${6:data}:any){
@@ -2466,7 +2466,7 @@
   \tdeclarations : [],
   \tproviders : []
   })
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t //selected Checkbox event
   \t ${5:functionName}(${6:data}:any){
@@ -2493,7 +2493,7 @@
   \tdeclarations : [],
   \tproviders : []
   })
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t time: any;
   ${5:functionName}(${6:data}:any){
@@ -2520,7 +2520,7 @@
   \tdeclarations : [],
   \tproviders : []
   })
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ${5:functionName}(${6:data}:any){
   \t //make some operation here "
@@ -2546,7 +2546,7 @@
   \tdeclarations : [],
   \tproviders : []
   })
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   \t ${5:functionName}(${6:data}:any){
@@ -2572,7 +2572,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t\t  })
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   \t ${5:functionName}(${6:data}:any){
@@ -2598,7 +2598,7 @@
   \tdeclarations : [],
   \tproviders : []
   })
-  \t export class ${4:className} implements OnInit
+  \t export class ${4:name}Component implements OnInit
   {
   \t constructor(){ }
   \t ngOnInit() { }
@@ -2622,7 +2622,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t  })
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
    }
@@ -2645,7 +2645,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   }
@@ -2668,7 +2668,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t })
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   }
@@ -2691,10 +2691,10 @@
   \tdeclarations : [],
   \tproviders : []
   \t\t})
-  \texport class ${1:name} implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t ${2:name}: any;
   \t constructor(){
-  \t this.$2 = ${3:value1}
+  \t this.$2 = ${5:value1}
   \t}
   \t //selected Checkbox event"
   \t ${4:functionName}(data:any){
@@ -2721,7 +2721,7 @@
   \tdeclarations : [],
   \tproviders : [IconLoaderService]
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t public ${5:name}:number = 10;
   \t constructor(){ }
   \t ngOnInit() { }
@@ -2745,7 +2745,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   \t}
@@ -2768,7 +2768,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   \t}
@@ -2791,7 +2791,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t ${5:variableName}:string;
   \t constructor(){ }
   \t ${6:functionName}(${7:data}:any){
@@ -2819,7 +2819,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   \t}
@@ -2842,7 +2842,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   \t}
@@ -2865,7 +2865,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t //Toggle click event"
   \t ${5:functionName}(${6:data}:any){}
@@ -2891,7 +2891,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t })
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   \t}
@@ -2914,7 +2914,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   \t}
@@ -2937,7 +2937,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   \t}
@@ -2960,7 +2960,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t MessageArray:any=[];
   \t constructor(){ }
   \t functionName(){
@@ -2986,7 +2986,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t //paginator onPageChange event"
   \t ${5:functionName}(${6:data}:any){
@@ -3013,7 +3013,7 @@
   \tdeclarations : [],
   \tproviders : []
   \t})
-  \t export class ${4:className} implements OnInit {
+  \t export class ${4:name}Component implements OnInit {
   \t constructor(){ }
   \t ngOnInit() { }
   \t}
@@ -3362,8 +3362,7 @@
     description: "Amexio Area Chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t \"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3375,7 +3374,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   })
-  \texport class AreaChartDemoComponent implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3390,8 +3389,7 @@
     description: "Amexio Chart Bar"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t \"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3403,7 +3401,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   })
-  \texport class Component_name implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data:any};
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3418,8 +3416,7 @@
     description: "Amexio Bubble Chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t \"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3431,7 +3428,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   })
-  \texport class Component_name implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3446,8 +3443,7 @@
     description: "Amexio candlestick chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t \"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3459,7 +3455,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   })
-  \texport class Component_name implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3474,8 +3470,7 @@
     description: "Amexio candlestick chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t\"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3487,7 +3482,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   })
-  \texport class Component_name implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3502,8 +3497,7 @@
     description: "amexio column chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t\"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3515,7 +3509,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   })
-  \texport class Component_name implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3530,8 +3524,7 @@
     description: "Amexio Combo Chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t \"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3543,7 +3536,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   })
-  \texport class AreaChartDemoComponent implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3558,8 +3551,7 @@
     description: "Amexio donut chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t\"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3571,7 +3563,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   })
-  \texport class AreaChartDemoComponent implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3582,12 +3574,11 @@
   }
   '''
   "Amexio Chart Histogram":
-    prefix: "Amexio-ts-chart-histogram"
+    prefix: "Amexio-ts-Chart-Histogram"
     description: "Amexio histogram chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t \"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3599,7 +3590,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   \t})
-  \texport class AreaChartDemoComponent implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3614,8 +3605,7 @@
     description: "Amexio Line Chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t \"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3627,7 +3617,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   })
-  \texport class Component_name implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3638,12 +3628,11 @@
   \t}
   '''
   "Amexio Chart Pie ":
-    prefix: "Amexio-ts-chart-pie"
+    prefix: "Amexio-ts-Chart-Pie"
     description: "Amexio Pie Chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t \"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3655,7 +3644,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   \t})
-  \texport class AreaChartDemoComponent implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3670,8 +3659,7 @@
     description: "Amexio Scatter Chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t\"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3683,7 +3671,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   })
-  \texport class AreaChartDemoComponent implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3698,8 +3686,7 @@
     description: "Amexio TimeLine Chart"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,ChartLoaderService} from
-  \t \"${1:amexio-ng-extensions}\";
+  \timport {AmexioWidgetModule,ChartLoaderService} from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3711,7 +3698,7 @@
   \tdeclarations : [],
   \tproviders : [ChartLoaderService]
   \t})
-  \texport class AreaChartDemoComponent implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3727,7 +3714,7 @@
     body: '''
   \timport {Component, OnInit} from '@angular/core';
   \timport {AmexioWidgetModule,DashboardLoaderService} from
-  \t\"${1:amexio-ng-extensions}\";
+  \t'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3739,7 +3726,7 @@
   \tdeclarations : [],
   \tproviders : [DashboardLoaderService]
   })
-  \texport class AreaChartDemoComponent implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3754,7 +3741,8 @@
     description: "Amexio Datapionts-dashboards"
     body: '''
   import { Component, OnInit } from '@angular/core';
-  import {AmexioWidgetModule} from 'amexio-ng-extensions';
+  import {AmexioWidgetModule, DashboardLoaderService}
+  \t from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
@@ -3766,7 +3754,7 @@
   \tdeclarations : [],
   \tproviders : [DashboardLoaderService]
   })
-  \texport class AreaChartDemoComponent implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3787,7 +3775,7 @@
   \tselector: '${2:Selectorname}',
   \t templateUrl: '${3:name}demo.html'
   })
-  \texport class Component_name implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3808,7 +3796,7 @@
   \tselector: '${2:Selectorname}',
   \t templateUrl: '${3:name}demo.html'
   })
-  \texport class Component_name implements OnInit {
+  \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
   \tconstructor() {
   \tthis.${4:Data}=[
@@ -3823,14 +3811,14 @@
     description: "Amexio Media Content"
     body: '''
   import { Component, OnInit } from '@angular/core';
-  import {AmexioWidgetModule,AmexioMapModule,AmexioEnterpriseModule} from
+  import {AmexioWidgetModule,AmexioEnterpriseModule} from
   \t'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
   \tselector: '${2:Selectorname}',
   \t templateUrl: '${3:name}demo.html'
   })
-  \texport class Component_name {
+  \texport class ${4:name}Component {
   }
   '''
   "Amexio Enterprise Youtube Video Player":
@@ -3838,7 +3826,7 @@
     description: "Amexio Video player"
     body: '''
   import { Component, OnInit } from '@angular/core';
-  import {AmexioWidgetModule,AmexioMapModule,AmexioEnterpriseModule} from
+  import {AmexioWidgetModule,AmexioEnterpriseModule} from
   \t'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
@@ -3851,7 +3839,7 @@
   \tdeclarations : [],
   \tproviders : [DashboardLoaderService]
   })
-  \texport class Component_name {
+  \texport class ${4:name}Component {
   }
   '''
   "Amexio Enterprise Multi Item Carousel":
@@ -3859,7 +3847,7 @@
     description: "Amexio Enterprise Multi item carousel"
     body: '''
   import { Component, OnInit } from '@angular/core';
-  import {AmexioWidgetModule,AmexioMapModule,AmexioEnterpriseModule} from
+  import {AmexioWidgetModule,AmexioEnterpriseModule} from
   \t 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \timport { Http } from '@angular/http';
@@ -3867,7 +3855,7 @@
   \tselector: '${2:Selectorname}',
   \t templateUrl: '${3:name}demo.html'
   })
-  \texport class Component_name{
+  \texport class ${4:name}Component {
   \tnewreleases : any;
   \ttopRateContent : any;
   \tconstructor(private http :Http) {
@@ -3891,7 +3879,7 @@
     \tdeclarations : [],
     \tproviders : []
     \t})
-    \t export class ${4:className} implements OnInit {
+    \t export class ${4:name}Component implements OnInit {
     \t constructor(){ }
     \t ngOnInit() { }
     \t}
