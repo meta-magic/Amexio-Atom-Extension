@@ -4,16 +4,25 @@
     prefix: "amexio-accordion"
     body: '''
   <amexio-accordion>
-  	<amexio-accordion-tab header="${1:header}" active="true">
+  	<amexio-accordion-tab header=\"${1:header}\" active=\"true\">
     	${2:Content}
   	</amexio-accordion-tab>
   </amexio-accordion>
   '''
     description: "Amexio Accordian Pane"
+  "amexio-accordion-tab":
+    prefix: "amexio-accordion-tab",
+    body: '''
+          <amexio-accordion-tab header=\"${1:header}\"
+          active=\"true\">
+          \t${3:Content}
+          </amexio-accordion-tab>
+        '''
+    description: "Amexio Accordian Pane Tab"
   "amexio-accordion-expand-all":
     prefix: "amexio-accordion-expand-all"
     body: '''
-  <amexio-accordion  expand-all=\"${1:isExpandAll}\">
+  <amexio-accordion  expand-all=\"true\">
   \t<amexio-accordion-tab header=\"${3:header}\" active=\"true\">
   \t\t${3:Content}
   \t</amexio-accordion-tab>
@@ -67,36 +76,51 @@
   "amexio-card":
     prefix: "amexio-card"
     body: '''
-  <amexio-card [header]=\"${1:enableHeader}\"
-  [footer]=\"${2:enableFooter}\"
-  [show]=\"${3:show}\"
-  [footer-align]=\"'${4:align}'\"
-  height=\"${5:height}\">
+  <amexio-btn [label]=\"'${1:label}'\" [type]=\"'primary'\"
+  [tooltip]=\"'${2:tooltip}'\" (click)=\"toggle()\"> </amexio-btn>
+  <amexio-card [header]=\"true\"
+  [footer]=\"true\"
+  [show]=\"flag\"
+  [footer-align]=\"'right'\"
+  height=\"${3:height}\">
   \t<amexio-header>
-  \t\t${6:header}
+  \t\t${4:header}
   \t</amexio-header>
   \t<amexio-body>
-  \t${7:body}
+  \t${5:body}
   \t</amexio-body>
   \t<amexio-action>
-  \t\t${8:footer}
+  \t\t${6:footer}
   \t</amexio-action>
   </amexio-card>
   '''
     description: "Amexio Card "
+  "amexio-card-with-height":
+    prefix: "amexio-card-with-height"
+    body: '''
+        <amexio-card [header]=\"false\"
+        [footer]=\"false\"
+        [show]=\"flag\"
+        [footer-align]=\"'center'\"
+        height=\"${1:height}\">
+        \t<amexio-body>
+        \t${2:body}
+        \t</amexio-body>
+        </amexio-card>
+      '''
+    description: "Amexio Card with Height"
   "amexio-card-image":
     prefix: "amexio-card-image"
     body: '''
-  <amexio-card [header]=\"${1:enableHeader}\"
-  [footer]=\"${2:enableFooter}\"
-  [show]=\"${3:show}\"
-  [footer-align]=\"'${4:align}'\"
-  [height]=\"${5:height}\">
+  <amexio-card [header]=\"true\"
+  [footer]=\"false\"
+  [footer-align]=\"'center'\"
+  [height]=\"${1:height}\">
   \t<amexio-header>
-  \t\t${6:header}
+  \t\t${2:header}
   \t</amexio-header>
   \t<amexio-body>
-  \t\t<amexio-image path=\"${7:image}\">
+  \t\t<amexio-image path=\"${3:image}\">
   \t</amexio-body>
   \t<amexio-action>
   \t\t${8:footer}
@@ -215,7 +239,7 @@
   '''
     description: "Amexio Steps"
   "amexio-steps-block":
-    prefix: "amexio-step-block"
+    prefix: "amexio-steps-block"
     body: '''
   \t <amexio-step-block [label]=\"'${2:label}'\"
   \t [active]=\"true\">
@@ -229,7 +253,7 @@
 \t [icon]=\"true\"
 \t (onClick)=\"${1:onClickEvent}(\\$event)\">
 \t\t <amexio-step-block [label]=\"'${2:label}'\"
-\t\t [active]=\"${3:active}\"
+\t\t [active]=\"true\"
 \t\t [active]=\"${4:icon}\" >
 \t\t </amexio-step-block>
 </amexio-steps>
@@ -242,7 +266,7 @@
   \t [index]=\"true\"
   \t (onClick)=\"${1:onClickEvent}(\\$event)\">
   \t\t <amexio-step-block [label]=\"'${2:label}'\"
-  \t\t [active]=\"${3:active}\" >
+  \t\t [active]=\"true\" >
   \t\t </amexio-step-block>
   </amexio-steps>
   '''
@@ -274,7 +298,7 @@
     prefix: "amexio-tab"
     body: '''
   \t <amexio-tab title=\"${1:title}\"
-  \t [active]=\"${2:isActive}\">
+  \t [active]=\"false\">
   \t\t${3:Content}
   \t </amexio-tab>
   '''
@@ -282,7 +306,7 @@
   "amexio-tab-view-closable":
     prefix: "amexio-tab-view-closable"
     body: '''
-  <amexio-tab-view  [closable]=\"${1:closable}\">
+  <amexio-tab-view  [closable]=\"true\">
   \t <amexio-tab title=\"${2:title}\"
   \t [active]=\"true\">
   \t\t${3:Content}
@@ -294,31 +318,31 @@
     prefix: "amexio-tab-with-icon"
     body: '''
   <amexio-tab title=\"${1:title}\"
-  \t [active]=\"${2:isActive}\"
-  \t [icon]=\"'${3:icon}'\">
-  \t\t${4:Content}
+  \t [active]=\"false\"
+  \t [icon]=\"'${2:icon}'\">
+  \t\t${3:Content}
   </amexio-tab>
   '''
     description: "Amexio Tab with Icon"
   "amexio-tab-view-with-icon":
-    prefix: "amexio-tab-with-icon"
+    prefix: "amexio-tab-view-with-icon"
     body: '''
-  <amexio-tab-view  [closable]=\"${1:closable}\">
+  <amexio-tab-view  [closable]=\"false\">
   \t<amexio-tab title=\"${1:title}\"
-  \t [active]=\"${2:isActive}\"
-  \t [icon]=\"'${3:icon}'\">
-  \t\t${4:Content}
+  \t [active]=\"true\"
+  \t [icon]=\"'${2:icon}'\">
+  \t\t${3:Content}
   \t</amexio-tab>
   </amexio-tab-view>
   '''
-    description: "Amexio Tab with Icon"
+    description: "Amexio Tab View with Icon"
   "amexio-tab-view-vertical":
     prefix: "amexio-tab-view-vertical"
     body: '''
   <amexio-vertical-tab-view>
   \t<amexio-tab title=\"${1:title}\"
-  \t [active]=\"${2:isActive}\"
-  \t [icon]=\"'${3:icon}'\">
+  \t [active]=\"true\"
+  \t [icon]=\"'${2:icon}'\">
   \t\t${3:Content}
   \t</amexio-tab>
   </amexio-vertical-tab-view>
@@ -329,8 +353,8 @@
     body: '''
   <amexio-right-vertical-tab-view>
   \t<amexio-tab title=\"${1:title}\"
-  \t [active]=\"${2:isActive}\"
-  \t [icon]=\"'${3:icon}'\">
+  \t [active]=\"true\"
+  \t [icon]=\"'${2:icon}'\">
   \t\t${3:Content}
   \t</amexio-tab>
   <amexio-right-vertical-tab-view>
@@ -395,7 +419,7 @@
   "amexio-dialogue-confirm":
     prefix: "amexio-dialogue-confirm"
     body: '''
-  <amexio-dialogue [show-window]=\"confirmdialogue\"
+  <amexio-dialogue [show-window]=\"confirmDialog\"
   \t [title]=\"'${1:title}'\"
   \t [message]=\"'${2:message}'\"
   \t [message-type]=\"'confirm'\"
@@ -406,7 +430,7 @@
   "amexio-dialogue-error":
     prefix: "amexio-dialogue-error"
     body: '''
-  <amexio-dialogue [show-window]=\"errordialogue\"
+  <amexio-dialogue [show-window]=\"errorDialog\"
   \t [title]=\"'${1:title}'\"
   \t [message]=\"'${2:message}'\"
   \t [primary-action-label]=\"'ok'\"
@@ -418,7 +442,7 @@
   "amexio-dialogue-warning":
     prefix: "amexio-dialogue-warning"
     body: '''
-  <amexio-dialogue [show-window]=\"warningdialogue\"
+  <amexio-dialogue [show-window]=\"warningDialog\"
   \t [title]=\"'${1:title}'\"
   \t [message]=\"'${2:message}'\"
   \t [message-type]=\"'warning'\"
@@ -429,7 +453,7 @@
   "amexio-dialogue-help":
     prefix: "amexio-dialogue-help"
     body: '''
-  <amexio-dialogue [show-window]=\"helpdialogue\"
+  <amexio-dialogue [show-window]=\"helpDialog\"
   \t [title]=\"'${1:title}'\"
   \t [message]=\"'${2:message}'\"
   \t [message-type]=\"'help'\"
@@ -440,7 +464,7 @@
   "amexio-dialogue-custom":
     prefix: "amexio-dialogue-custom"
     body: '''
-  <amexio-dialogue [show-window]=\"customdialogue\"
+  <amexio-dialogue [show-window]=\"customDialog\"
   \t [title]=\"'${1:title}'\"
   \t [custom]=\"'true'\"
   \t [type]=\"'confirm'\">
@@ -457,8 +481,8 @@
     prefix: "amexio-image"
     body: '''
   <amexio-image [path]=\"'${1:path}'\"
-  [c-class]=\"'img-style'\"
-  [tooltip]=\"'${2:tooltip}'\">
+  \t[c-class]=\"'img-style'\"
+  \t[tooltip]=\"'${2:tooltip}'\">
   </amexio-image>
   '''
     description: "Amexio Image "
@@ -474,7 +498,7 @@
     prefix: "amexio-image-icon-mdb"
     body: '''
   <amexio-image [icon-class]=\"'${1:iconClass}'\"
-  [mda]=\"'cloud'\"
+  \t[mda]=\"'cloud'\"
   \t[tooltip]=\"'${2:tooltip}'\">
   </amexio-image>
   '''
@@ -501,10 +525,10 @@
   "amexio-dockbar-item":
     prefix: "amexio-dockbar-item"
     body: '''
-  \t<amexio-dockbar-item [icon]=\"'${2:icon}'\"
-  \t\t[title]=\"'${3:title}'\"
-  \t\t[width]=\"'${4:width}'\">
-  \t\t\t${5:Content}
+  \t<amexio-dockbar-item [icon]=\"'${1:icon}'\"
+  \t\t[title]=\"'${2:title}'\"
+  \t\t[width]=\"'${3:width}'\">
+  \t\t\t${4:Content}
   \t\t</amexio-dockbar-item>
   '''
     description: "Amexio Dockbar Item"
@@ -643,7 +667,7 @@
   \t\t [(ngModel)]=\"${1:ngModel}\"
   \t\t [place-holder]=\"'${2:placeHolder}'\"
   \t\t name=\"${3:name}\"
-  \t\t [search]=\"search\"
+  \t\t [search]=\"true\"
   \t\t [data-reader]=\"'${4:data}'\"
   \t\t [field-label]=\"'${5:fieldLabel}'\"
   \t\t [http-url]=\"'${6:url}'\"
@@ -865,7 +889,7 @@
   \t [field-label]=\"'${2:fieldLabel}'\"
   \t [max]=\"${3:max}\"
   \t name=\"${4:name}\"
-  \t [read-only]=\"${5:isReadonly}\">
+  \t [read-only]=\"false\">
   </amexio-rating-input>
   '''
     description: "Simple Rating Component With Label"
@@ -889,7 +913,7 @@
   \t [empty-icon]=\"'☐'\"
   \t [max]=\"${2:max}\"
   \t name=\"${3:name}\"
-  \t [read-only]=\"isReadonly\">
+  \t [read-only]=\"false\">
   </amexio-rating-input>
   '''
     description: "Rating Component With Custom Icons"
@@ -903,7 +927,7 @@
   \t [max]=\"${2:max}\"
   \t name=\"${3:name}\"
   \t [titles]=\"${4:titles}\"
-  \t [read-only]=\"isReadonly\">
+  \t [read-only]=\"false\">
   </amexio-rating-input>
   '''
     description: "Rating With Rate Titles"
@@ -1020,7 +1044,7 @@
   \t name=\"${2:name}\"
   \t [place-holder]=\"'${3:placeHolder}'\"
   \t [icon-feedback]=\"true\"
-  \t [font-style]=\"'${4:fontStyle}'\">
+  \t [font-family]=\"'${4:fontfamily}'\">
   </amexio-text-input>
   '''
     description: "Family Styling"
@@ -1069,6 +1093,17 @@
   </amexio-toggle>
   '''
     description: "Square Toggle With Event"
+  "amexio-button":
+    prefix: "amexio-button",
+    body: '''
+      "<amexio-button",
+      "\t [label]=\"'${1:label}'\"",
+      "\t [type]=\"'primary'\"",
+      "\t [tooltip]=\"'${2:toolTip}'\" >",
+      "</amexio-button>"
+    '''
+    description: "Button Types Type :: primary : secondary :
+       warning : danger :error"
   "amexio-button-type":
     prefix: "amexio-button-type"
     body: '''
@@ -1078,18 +1113,18 @@
   \t [tooltip]=\"'${3:toolTip}'\" >
   </amexio-button>
   '''
-    description: "Button Types"
-  "amexio-button-state":
-    prefix: "amexio-button-state"
+    description: "Button Types :: primary : secondary : warning : danger :error"
+  "amexio-button-disabled":
+    prefix: "amexio-button-disabled"
     body: '''
   <amexio-button
   \t [label]=\"'${1:label}'\"
-  \t [type]=\"'disabled'\"
+  \t [type]=\"'primary'\"
   \t [tooltip]=\"'${2:toolTip}'\"
   \t [disabled]=\"'true'\" >
   </amexio-button>
   '''
-    description: "Button States"
+    description: "Button disabled"
   "amexio-button-icon":
     prefix: "amexio-button-icon"
     body: '''
@@ -1097,7 +1132,7 @@
   \t [label]=\"'${1:label}'\"
   \t [type]=\"'danger'\"
   \t [tooltip]=\"'${2:toolTip}'\"
-  \t [icon]=\"'${4:icon}'\">
+  \t [icon]=\"'${3:icon}'\">
   </amexio-button>
   '''
     description: "Button with Icons"
@@ -1343,7 +1378,7 @@
     \t (onPageChange)=\"${3:clickfunction(\\$event)}\">
   </amexio-paginator>
   '''
-    description: "paginator with page size 10-"
+    description: "paginator with page size"
   "amexio-progress-bar":
     prefix: "amexio-progress-bar"
     body: '''
@@ -1367,11 +1402,11 @@
     \t\t\t\t\t\t\t[width]=\"'${3:width}'\" >
     \t<amexio-chart-title [title]=\"'${4:tilte}'\">
     \t</amexio-chart-title>
-    \t<amexio-chart-legend [legendposition]=\"'${5:position}'\">
+    \t<amexio-chart-legend [position]=\"'${5:position}'\">
     \t</amexio-chart-legend>
     \t</amexio-chart-area>
   '''
-    description: "Amexio chart area"
+    description: "Amexio chart area legend[position] :: start : center : end"
   "amexio-chart-bar":
     prefix: "amexio-chart-bar"
     body: '''
@@ -1384,7 +1419,7 @@
     \t</amexio-chart-legend>
     \t</amexio-chart-bar>
   '''
-    description: "Amexio Chart Bar"
+    description: "Amexio Chart Bar legend[position] :: start : center : end"
   "amexio-chartbar-stack":
     prefix: "amexio-chartbar-stack"
     body: '''
@@ -1398,7 +1433,8 @@
     \t</amexio-chart-legend>
     \t</amexio-chart-bar>
   '''
-    description: "Amexio chartbar Stack"
+    description: "Amexio chartbar Stack legend[position] :: start :
+       center : end"
   "amexio-chart-bubble":
     prefix: "amexio-chart-bubble"
     body: '''
@@ -1407,9 +1443,9 @@
     \t\t\t\t\t\t\t\t[data]=\"${3:Data}\">
     \t\t\t\t\t\t\t\t<amexio-chart-title [title]=\"'${4:title}'\">
     \t\t\t\t\t\t\t </amexio-chart-title>
-    \t\t\t\t\t<amexio-chart-horizontal-axis [title]=\"'${5:Horizontal-axis}'\">
+    \t\t\t\t\t<amexio-chart-horizontal-axis [title]=\"'${5: title}'\">
     \t\t\t\t\t\t\t</amexio-chart-horizontal-axis>
-    \t\t\t\t\t\t\t<amexio-chart-vertical-axis [title]=\"'${6:Vertical-axis}'\">
+    \t\t\t\t\t\t\t<amexio-chart-vertical-axis [title]=\"'${6:title}'\">
     \t\t\t\t\t\t\t</amexio-chart-vertical-axis>
     \t</amexio-chart-bubble>
   '''
@@ -1462,7 +1498,8 @@
     \t</amexio-chart-legend>
   </amexio-chart-column>
   '''
-    description: "Amexio chart ColumnBar"
+    description: "Amexio chart ColumnBar legend[position] :: start :
+      center : end"
   "amexio-chart-combo":
     prefix: "amexio-chart-combo"
     body: '''
@@ -1492,7 +1529,7 @@
     \t</amexio-chart-legend>
     \t</amexio-chart-donut>
   '''
-    description: "Amexio Donut Chart "
+    description: "Amexio Donut Chart legend[position] :: start : center : end"
   "amexio-chart-histogram":
     prefix: "amexio-chart-histogram"
     body: '''
@@ -1514,7 +1551,7 @@
     \t</amexio-chart-legend>
   </amexio-chart-line>
   '''
-    description: "Amexio line Chart"
+    description: "Amexio line Chart legend[position] :: start : center : end"
   "amexio-chart-pie":
     prefix: "amexio-chart-pie"
     body: '''
@@ -1527,7 +1564,7 @@
     \t\t</amexio-chart-legend>
   </amexio-chart-pie>
   '''
-    description: "Amexio Pie Chart"
+    description: "Amexio Pie Chart legend[position] :: start : center : end"
   "amexio-chart-3Dpie":
     prefix: "amexio-chart-3Dpie"
     body: '''
@@ -1541,7 +1578,7 @@
     \t\t</amexio-chart-legend>
   </amexio-chart-pie>
   '''
-    description: "Amexio 3DPie Chart"
+    description: "Amexio 3DPie Chart legend[position] :: start : center : end"
   "amexio-chart-Scatter":
     prefix: "amexio-chart-Scatter"
     body: '''
@@ -1707,7 +1744,7 @@
     \t[enable-data-filter]=\"false\"
     \t(rowSelect)=\"'${5:getRowData}($event)'\">
     \t<amexio-data-table-column [width]=\"${6:width}\"
-    \t\t\t\t\t\t\t[data-index]=\"'${7:name_official}'\"
+    \t\t\t\t\t\t\t[data-index]=\"'${7:dataIndex}'\"
     \t\t\t\t\t\t\t[data-type]=\"'string'\" [hidden]=\"false\"
     \t\t\t\t\t\t\t[text]=\"'${8:Name}'\">
     \t\t\t\t\t\t\t<ng-template #amexioBodyTmpl let-column let-row=\"${9:row}\">
@@ -1719,16 +1756,16 @@
     \t\t\t\t\t\t\t</ng-template>
     \t</amexio-data-table-column>
     \t<amexio-data-table-column [width]=\"${11:width}\"
-    \t\t\t\t\t\t\t[data-index]=\"'${12:latitude}'\"
+    \t\t\t\t\t\t\t[data-index]=\"'${12:dataIndex}'\"
     \t\t\t\t\t\t\t[data-type]=\"'string'\"
     \t\t\t\t\t\t\t[hidden]=\"false\"
-    \t\t\t\t\t\t\t[text]=\"'${13:Latitude}'\">
+    \t\t\t\t\t\t\t[text]=\"'${13:Name}'\">
     \t</amexio-data-table-column>
     \t<amexio-data-table-column [width]=\"${14:width}\"
-    \t\t\t\t\t\t\t[data-index]=\"'${15:longitude}'\"
+    \t\t\t\t\t\t\t[data-index]=\"'${15:dataIndex}'\"
     \t\t\t\t\t\t\t[data-type]=\"'${16:number}'\"
     \t\t\t\t\t\t\t[hidden]=\"false\"
-    \t\t\t\t\t\t\t[text]=\"'${17:Longitude}'\">
+    \t\t\t\t\t\t\t[text]=\"'${17:text}'\">
     \t</amexio-data-table-column>
     \t</amexio-datagrid>
   '''
@@ -1737,14 +1774,14 @@
     prefix: "amexio-data-grid-filter"
     body: '''
   <amexio-datagrid
-    \t[title]=\"'${1:Employee Data}'\"
+    \t[title]=\"'${1:title}'\"
     \t[page-size] = \"'${2:page-size}'\"
     \t[data-reader]=\"'${3:data}'\"
     \t[http-url]=\"'${4:path}'\"
     \t[http-method]=\"'get'\"
     \t[enable-data-filter]=\"true\"
     \t(selectedRowData)=\"${5:onRowSelect}($event)\">
-    \t\t<amexio-data-table-column [data-index]=\"'${6:preferredFullName}'\"
+    \t\t<amexio-data-table-column [data-index]=\"'${6:columnName}'\"
     \t\t\t\t\t\t\t\t[data-type]=\"'string'\"
     \t\t\t\t\t\t\t\t[hidden]=\"false\"
     \t\t\t\t\t\t\t\t[text]=\"'${7:text}'\">
@@ -1756,18 +1793,18 @@
     prefix: "amexio-data-groupby-grid"
     body: '''
   <amexio-datagrid
-    \t[title]=\"'${1:Employee Data}'\"
+    \t[title]=\"'${1:title}'\"
     \t[page-size] =\"${2:page-size}\"
     \t[data-reader]=\"'${3:data}'\"
     \t[groupby]=\"true\"
-    \t[groupby-data-index]=\"'${4:jobTitle}'\"
+    \t[groupby-data-index]=\"'${4:groupByColumnName}'\"
     \t[http-url]=\"'${5:path}'\"
     \t[http-method]=\"'get'\"
     \t(selectedRowData)=\"${6:onRowSelect}($event)\">
-    \t<amexio-data-table-column [data-index]=\"'${7:preferredFullName}'\"
+    \t<amexio-data-table-column [data-index]=\"'${7:dataIndex}'\"
     \t\t\t\t\t\t\t\t[data-type]=\"'string'\"
     \t\t\t\t\t\t\t\t[hidden]=\"false\"
-    \t\t\t\t\t\t\t\t[text]=\"'${8:FullName}'\">
+    \t\t\t\t\t\t\t\t[text]=\"'${8:text}'\">
     \t</amexio-data-table-column>
   </amexio-datagrid>
   '''
@@ -1786,7 +1823,7 @@
     \t<amexio-data-table-column [data-index]=\"'${6:dataindex}'\"
     \t\t\t\t\t[data-type]=\"'string'\"
     \t\t\t\t\t[hidden]=\"false\"
-    \t\t\t\t\t[text]=\"'Name'\">
+    \t\t\t\t\t[text]=\"'${7:text}'\">
     \t</amexio-data-table-column>
   </amexio-datagrid
   '''
@@ -1800,16 +1837,16 @@
     \t[data-reader]=\"'${2:data}'\"
     \t(selectedRecord)=\"${3:getSelectedData}($event)\">
     \t<amexio-data-table-column
-    \t\t\t\t\t\t\t[data-index]=\"'${4:user}'\"
+    \t\t\t\t\t\t\t[data-index]=\"'${4:dataIndex}'\"
     \t\t\t\t\t\t\t[data-type]=\"'string'\"
     \t\t\t\t\t\t\t[hidden]=\"false\"
-    \t\t\t\t\t\t\t[text]=\"'User'\">
+    \t\t\t\t\t\t\t[text]=\"'${5:text}'\">
     \t</amexio-data-table-column>
     \t<amexio-data-table-column
-    \t\t\t\t\t\t\t[data-index]=\"'${5:duration}'\"
+    \t\t\t\t\t\t\t[data-index]=\"'${6:dataIndex}'\"
     \t\t\t\t\t\t\t[data-type]=\"'number'\"
     \t\t\t\t\t\t\t[hidden]=\"false\"
-    \t\t\t\t\t\t\t[text]=\"'${6:Duration}'\">
+    \t\t\t\t\t\t\t[text]=\"'${6:text}'\">
     \t</amexio-data-table-column>
   </amexio-tree-data-table>
   '''
@@ -1863,7 +1900,7 @@
     body: '''
   <amexio-horizontal-treeview [data-reader]=\"'${1:data}'\"
     \t\t\t\t\t\t\t\t[http-method]=\"'get'\"
-    \t\t\t\t\t\t\t\t[label]=\"'${2:Menu}'\"
+    \t\t\t\t\t\t\t\t[label]=\"'${2:label}'\"
     \t\t\t\t\t\t\t\t(nodeClick)=\"${3:getNodeData}(\\$event)\"
     \t\t\t\t\t\t\t\t[http-url]=\"'${4:path}'\">
   </amexio-horizontal-treeview>
@@ -1874,8 +1911,8 @@
     body: '''
   <amexio-listbox [enable-checkbox]=\"true\"
     \t\t\t\t\t[height]=\"${1:height}\"
-    \t\t\t\t\t[header]=\"'${2:Contacts}'\"
-    \t\t\t\t\t[search-placeholder]=\"'${3:Search Contacts}'\"
+    \t\t\t\t\t[header]=\"'${2:header}'\"
+    \t\t\t\t\t[search-placeholder]=\"'${3:Search placeHolder}'\"
     \t\t\t\t\t[data]=\"'${4:localData}'\"
     \t\t\t\t\t[filter]=\"true\"
     \t\t\t\t\t[data-reader]=\"'${5:response.data}'\"
@@ -1888,13 +1925,13 @@
     prefix: "amexio-listbox-template"
     body: '''
   <amexio-listbox [height]=\"'${1:height}'\"
-    \t\t\t\t\t[header]=\"'${2:Contacts}'\"
-    \t\t\t\t\t[search-placeholder]=\"'${3:Search Contacts}'\"
+    \t\t\t\t\t[header]=\"'${2:header}'\"
+    \t\t\t\t\t[search-placeholder]=\"'${3:Search Placeholder}'\"
     \t\t\t\t\t[data]=\"${3:localData}\"
     \t\t\t\t\t[filter]=\"'false'\"
     \t\t\t\t\t[enable-checkbox]=\"'false'\"
     \t\t\t\t\t[data-reader]=\"'${4:response.data}'\"
-    \t\t\t\t\t[display-field]=\"'${5:name}'\"
+    \t\t\t\t\t[display-field]=\"'${5:displayField}'\"
     \t\t\t\t\t(onRowClick)=\"'${onRowClick}(\\$event)'\">
     \t\t\t\t\t<ng-template #amexioBodyTmpl let-row=\"row\">
   <amexio-row>
@@ -1963,6 +2000,150 @@
 
 # Generated with Atomizr – https://atom.io/packages/atomizr
 '.source.ts':
+  "AmexioWidgetModule":
+    prefix: "AmexioWidgetModule"
+    description: "Amexio Widget Module"
+    body: '''
+              import { AmexioWidgetModule} from 'amexio-ng-extensions';
+              import { CommonDataService} from 'amexio-ng-extensions';
+              import { IconLoaderService} from 'amexio-ng-extensions';
+              ///update your NgModule accordingly
+              @NgModule({
+              imports: [AmexioWidgetModule],
+              providers : [CommonDataService,IconLoaderService]
+              })
+          '''
+  "AmexioPaneModule":
+    prefix: "AmexioPaneModule"
+    description: "Amexio Pane Module"
+    body: '''
+            import { AmexioPaneModule } from 'amexio-ng-extensions';
+            import { CommonDataService} from 'amexio-ng-extensions';
+            import { IconLoaderService} from 'amexio-ng-extensions';
+            import {NgModule} from '@angular/core';
+            ///update your NgModule accordingly
+            @NgModule({
+            imports: [AmexioPaneModule],
+            providers : [CommonDataService,IconLoaderService]
+            })
+        '''
+  "AmexioNavModule":
+    prefix: "AmexioNavModule"
+    description: "Amexio Nav Module"
+    body: '''
+            import { AmexioNavModule} from 'amexio-ng-extensions';
+            import { CommonDataService} from 'amexio-ng-extensions';
+            import { IconLoaderService} from 'amexio-ng-extensions';
+            import { NgModule} from '@angular/core';
+            ///update your NgModule accordingly
+              @NgModule({
+            imports: [AmexioNavModule],
+            providers : [CommonDataService,IconLoaderService]
+              })
+          '''
+  "AmexioMediaModule":
+    prefix: "AmexioMediaModule"
+    description: "Amexio Media Module"
+    body: '''
+              import { AmexioMediaModule} from 'amexio-ng-extensions';
+              import { CommonDataService} from 'amexio-ng-extensions';
+              import { NgModule} from '@angular/core';
+              ///update your NgModule accordingly
+              @NgModule({
+              imports: [AmexioMediaModule],
+              providers : [CommonDataService]
+              })
+          '''
+  "AmexioMapModule":
+    prefix: "AmexioMapModule"
+    description : "Amexio Map Module"
+    body: '''
+              import { AmexioMapModule} from 'amexio-ng-extensions';
+              import { CommonDataService} from 'amexio-ng-extensions';
+              import { MapLoaderService} from 'amexio-ng-extensions';
+              import { NgModule} from '@angular/core';
+              ///update your NgModule accordingly
+              @NgModule({
+              imports: [AmexioMapModule],
+              providers : [CommonDataService,MapLoaderService]
+              })
+          '''
+  "AmexioLayoutModule":
+    prefix: "AmexioLayoutModule"
+    description: "Amexio Layout Module"
+    body: '''
+              import { AmexioLayoutModule} from 'amexio-ng-extensions';
+              import { NgModule} from '@angular/core';
+              ///update your NgModule accordingly
+              @NgModule({
+              imports: [AmexioLayoutModule]
+              })
+          '''
+  "AmexioFormsModule":
+    prefix: "AmexioFormsModule"
+    description: "Amexio Forms Module"
+    body: '''
+          import { AmexioFormsModule} from 'amexio-ng-extensions';
+          import { NgModule} from '@angular/core';
+          ///update your NgModule accordingly
+          @NgModule({
+          imports: [AmexioFormsModule]
+          })
+        '''
+  "AmexioEnterpriseModule":
+    prefix: "AmexioEnterpriseModule"
+    description: "Amexio Enterprise Module"
+    body: '''
+            import { AmexioEnterpriseModule,CommonDataService}
+            from 'amexio-ng-extensions';
+            import { NgModule} from '@angular/core';
+            ///update your NgModule accordingly
+            @NgModule({
+            imports: [AmexioEnterpriseModule],
+            providers : [CommonDataService]
+            })
+        '''
+  "AmexioChartsModule":
+    prefix: "AmexioChartsModule"
+    description: "Amexio Charts Module"
+    body: '''
+        import { AmexioChartsModule,CommonDataService,ChartLoaderService}
+         from 'amexio-ng-extensions';
+        import { NgModule} from '@angular/core';
+        ///update your NgModule accordingly
+        @NgModule({
+        imports: [AmexioChartsModule],
+        providers : [CommonDataService,ChartLoaderService]
+        })
+      '''
+  "AmexioDataModule":
+    prefix: "AmexioDataModule"
+    description: "Amexio Data Module"
+    body: '''
+      import { AmexioDataModule,CommonDataService} from 'amexio-ng-extensions';
+      import { NgModule} from '@angular/core';
+      //update your NgModule accordingly
+      @NgModule({
+      imports: [AmexioDataModule],
+      exports: [],
+      providers : [CommonDataService],
+      declarations : []
+      })
+    '''
+  "AmexioDashBoardModule":
+    prefix: "AmexioDashBoardModule"
+    description: "Amexio Data Module"
+    body: '''
+      import { AmexioDashBoardModule,DashboardLoaderService,ChartLoaderService}
+      from 'amexio-ng-extensions';
+      import { NgModule} from '@angular/core';
+      ///update your NgModule accordingly
+      @NgModule({
+      imports: [AmexioDashBoardModule],
+      providers : [DashboardLoaderService,ChartLoaderService]
+        })
+    '''
+
   "Amexio Accordion":
     prefix: "Amexio-ts-Accordion"
     description: "Amexio Accordion"
@@ -2035,30 +2216,35 @@
   \tngOnInit() { }$0
   }
   '''
-  "Amexio Card":
-    prefix: "Amexio-ts-Card"
-    description: "Amexio Card"
-    body: '''
-  import { Component, OnInit } from '@angular/core';
-  import {AmexioWidgetModule} from 'amexio-ng-extensions';
-  import {NgModule} from '@angular/core';
+"Amexio Card":
+  prefix: "Amexio-ts-Card"
+  description: "Amexio Card"
+  body: '''
+            import { Component, OnInit } from '@angular/core';
+            import {AmexioWidgetModule} from 'amexio-ng-extensions';
+            import {NgModule} from '@angular/core';
 
-  @Component({
-  \tselector: '${1:selector-name}',
-  \ttemplateUrl: '${2:name}.component.html'
-  })
+            @Component({
+            \tselector: '${1:selector-name}',
+            \ttemplateUrl: '${2:name}.component.html'
+            })
 
-  @NgModule({
-  imports: [AmexioWidgetModule],
-  exports: [],
-  declarations : []
-  })
-  export class ${3:Name}Component implements OnInit {
-  \tconstructor() { }
-
-  \tngOnInit() { }$0
-  }
-  '''
+            @NgModule({
+            imports: [AmexioWidgetModule],
+            exports: [],
+            declarations : []
+            })
+            export class ${3:Name}Component implements OnInit {
+            flag : boolean;
+            \tconstructor() {
+             this.flag=true;
+            }
+            toggle(){
+            this.flag = !this.flag;
+            }
+            \t ngOnInit() { }$0
+            }
+        '''
   "Amexio Row":
     prefix: "Amexio-ts-Row"
     description: "Amexio Row"
@@ -3713,7 +3899,7 @@
     description: "Amexio Chart Dashboard"
     body: '''
   \timport {Component, OnInit} from '@angular/core';
-  \timport {AmexioWidgetModule,DashboardLoaderService} from
+  \timport {AmexioWidgetModule,DashboardLoaderService,ChartLoaderService} from
   \t'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
@@ -3724,7 +3910,7 @@
   \timports: [AmexioWidgetModule ],
   \texports: [],
   \tdeclarations : [],
-  \tproviders : [DashboardLoaderService]
+  \tproviders : [DashboardLoaderService,ChartLoaderService]
   })
   \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
@@ -3741,7 +3927,7 @@
     description: "Amexio Datapionts-dashboards"
     body: '''
   import { Component, OnInit } from '@angular/core';
-  import {AmexioWidgetModule, DashboardLoaderService}
+  import {AmexioWidgetModule, DashboardLoaderService,ChartLoaderService}
   \t from 'amexio-ng-extensions';
   \timport{NgModule} from '@angular/core';
   \t@Component({
@@ -3752,7 +3938,7 @@
   \timports: [AmexioWidgetModule ],
   \texports: [],
   \tdeclarations : [],
-  \tproviders : [DashboardLoaderService]
+  \tproviders : [DashboardLoaderService,ChartLoaderService]
   })
   \texport class ${4:name}Component implements OnInit {
   \t${4:Data}:any;
@@ -3856,11 +4042,8 @@
   \t templateUrl: '${3:name}demo.html'
   })
   \texport class ${4:name}Component {
-  \tnewreleases : any;
-  \ttopRateContent : any;
   \tconstructor(private http :Http) {
-  \tthis.http.get('path').subscribe(res=>this.newreleases = res.json());
-  \tthis.http.get('path').subscribe(res=>this.topRateContent = res.json());
+  \\\some operation here
   }
   }
   '''
@@ -3884,3 +4067,4 @@
     \t ngOnInit() { }
     \t}
     '''
+
