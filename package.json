@@ -1,7 +1,7 @@
 {
   "name": "MetaMagic-Amexio",
   "displayName": "Amexio Angular Extensions for Atom",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Angular 4+ (HTML, TypeScripts, Amexio) Code Snippets",
   "keywords": [
     "Amexio Angular Extensions",
